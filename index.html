@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loui's Cupcakes — A Taste of Happiness</title>
+  <meta name="description" content="Premium cupcakes available 24/7 through our vending machine network. Sourced from trusted partner bakeries, branded and distributed by Loui's Cupcakes." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">Loui's <span>Cupcakes</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#products">Our Range</a></li>
+    <li><a href="#locations">Locations</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#catering">Catering</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="nav-lang">
+      <a class="lang-btn active" href="index.html">EN</a>
+      <a class="lang-btn" href="de.html">DE</a>
+      <a class="lang-btn" href="fr.html">FR</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Available at vending machines near you</div>
+    <h1>A taste of <em>happiness.</em></h1>
+    <p class="hero-sub">Premium cupcakes, sourced from trusted partner bakeries, packaged under our brand and brought directly to you — 24/7, wherever you are.</p>
+    <div class="hero-ctas">
+      <a href="#products" class="btn-primary">See our range</a>
+      <a href="#locations" class="btn-outline">Find a machine</a>
+    </div>
+    <div class="hero-badges">
+      <span class="hero-badge">🧁 Oreo</span>
+      <span class="hero-badge">🍫 Chocolate Brownie</span>
+      <span class="hero-badge">❤️ Red Velvet</span>
+      <span class="hero-badge">🍓 Strawberry</span>
+      <span class="hero-badge">+ more</span>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="160" cy="160" r="140" fill="#F7A8B8" opacity="0.18"/>
+      <circle cx="160" cy="160" r="100" fill="#F7A8B8" opacity="0.18"/>
+      <!-- cupcake body -->
+      <rect x="100" y="185" width="120" height="70" rx="18" fill="#F7A8B8"/>
+      <!-- wrapper lines -->
+      <line x1="130" y1="185" x2="125" y2="255" stroke="#e8889c" stroke-width="2" opacity="0.5"/>
+      <line x1="160" y1="185" x2="160" y2="255" stroke="#e8889c" stroke-width="2" opacity="0.5"/>
+      <line x1="190" y1="185" x2="195" y2="255" stroke="#e8889c" stroke-width="2" opacity="0.5"/>
+      <!-- frosting -->
+      <ellipse cx="160" cy="170" rx="64" ry="38" fill="#FFF5EC"/>
+      <ellipse cx="138" cy="158" rx="22" ry="26" fill="#FFF5EC"/>
+      <ellipse cx="160" cy="148" rx="26" ry="30" fill="#FFF5EC"/>
+      <ellipse cx="182" cy="158" rx="22" ry="26" fill="#FFF5EC"/>
+      <!-- top swirl -->
+      <ellipse cx="160" cy="118" rx="18" ry="22" fill="#FFF5EC"/>
+      <circle cx="160" cy="98" r="8" fill="#6B3E2E"/>
+      <!-- sprinkles -->
+      <rect x="135" y="150" width="8" height="3" rx="1.5" fill="#F7A8B8" transform="rotate(-20 135 150)"/>
+      <rect x="170" y="142" width="8" height="3" rx="1.5" fill="#6B3E2E" transform="rotate(15 170 142)"/>
+      <rect x="150" y="135" width="8" height="3" rx="1.5" fill="#F7A8B8" transform="rotate(-35 150 135)"/>
+      <rect x="178" y="155" width="6" height="3" rx="1.5" fill="#6B3E2E" transform="rotate(25 178 155)"/>
+    </svg>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <h2>How it works</h2>
+  <p class="how-sub">From partner bakery to vending machine — quality you can trust at every step.</p>
+  <div class="how-steps">
+    <div class="how-step">
+      <div class="how-step-icon">🏭</div>
+      <h3>Partner bakeries</h3>
+      <p>Certified bakeries produce cupcakes to our exact specification and quality standards.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-icon">📦</div>
+      <h3>Loui's packaging</h3>
+      <p>Every cupcake is individually packaged with our branding, allergen info, and best-before date.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-icon">🤖</div>
+      <h3>Vending machines</h3>
+      <p>Our machines are stocked fresh and placed at convenient locations across the region.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-icon">🧁</div>
+      <h3>Your treat</h3>
+      <p>Pick your flavour, pay, enjoy. A quality cupcake whenever and wherever you need one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="section-eyebrow">Our range</div>
+  <h2 class="section-title">Cupcake selection</h2>
+  <p class="section-sub">A carefully chosen range of flavours — available at our vending machine locations. Seasonal specials rotate throughout the year.</p>
+  <div class="product-notice">
+    <span>🏪</span>
+    <span><strong>Available in-machine only.</strong> All cupcakes are produced by our partner bakeries and sold exclusively through Loui's Cupcakes vending machines.</span>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <span class="product-emoji">🍪</span>
+      <div class="product-name">Oreo Cupcake</div>
+      <div class="product-price">€3.50</div>
+      <span class="product-tag tag-classic">Classic</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🍫</span>
+      <div class="product-name">Chocolate Brownie</div>
+      <div class="product-price">€3.80</div>
+      <span class="product-tag tag-special">Signature</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">❤️</span>
+      <div class="product-name">Red Velvet</div>
+      <div class="product-price">€3.50</div>
+      <span class="product-tag tag-classic">Classic</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🍓</span>
+      <div class="product-name">Strawberry Shortcake</div>
+      <div class="product-price">€3.80</div>
+      <span class="product-tag tag-special">Signature</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🍋</span>
+      <div class="product-name">Lemon Cupcake</div>
+      <div class="product-price">€3.50</div>
+      <span class="product-tag tag-classic">Classic</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🫐</span>
+      <div class="product-name">Blueberry Cream Cheese</div>
+      <div class="product-price">€3.50</div>
+      <span class="product-tag tag-classic">Classic</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🍫</span>
+      <div class="product-name">Banana Chocolate</div>
+      <div class="product-price">€3.50</div>
+      <span class="product-tag tag-classic">Classic</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🍂</span>
+      <div class="product-name">Pumpkin Cupcake</div>
+      <div class="product-price">€3.80</div>
+      <span class="product-tag tag-seasonal">Seasonal</span>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations" id="locations">
+  <div class="locations-inner">
+    <div>
+      <div class="section-eyebrow">Find us</div>
+      <h2 class="section-title">Our vending machine locations</h2>
+      <p class="section-sub">We're rolling out our first machines across the Saar-Mosel region. Our goal is to bring Loui's Cupcakes to the places you already are.</p>
+      <div class="location-types">
+        <div class="location-type"><span>🛍️</span> Shopping centres</div>
+        <div class="location-type"><span>🚉</span> Transport hubs</div>
+        <div class="location-type"><span>🎓</span> Schools & universities</div>
+        <div class="location-type"><span>💼</span> Business parks</div>
+        <div class="location-type"><span>🏋️</span> Gyms & leisure</div>
+        <div class="location-type"><span>🏥</span> Healthcare facilities</div>
+      </div>
+    </div>
+    <div class="coming-soon-map">
+      <div style="font-size:48px;margin-bottom:16px;">📍</div>
+      <h3>Locations coming soon</h3>
+      <p>Our first machines are on their way. Sign up to be notified when a Loui's Cupcakes machine opens near you.</p>
+      <a href="#contact" class="btn-primary" style="background:var(--pink);color:var(--brown);">Get notified</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="section-eyebrow">About us</div>
+    <h2 class="section-title">We're not a bakery. We're a cupcake brand.</h2>
+    <p class="section-sub">Loui's Cupcakes by Alston Ponde-Silcott is a modern distribution concept built around one idea: great cupcakes should be available whenever and wherever you want them.</p>
+    <div class="about-model">
+      <div class="model-step">
+        <div class="model-step-num">Step 01</div>
+        <h3>Partner bakeries produce</h3>
+        <p>We work with certified partner bakeries who produce cupcakes to our exact recipe and quality specification.</p>
+      </div>
+      <div class="model-step">
+        <div class="model-step-num">Step 02</div>
+        <h3>Loui's brands & packages</h3>
+        <p>Every cupcake is packaged in Loui's Cupcakes branded boxes with allergen information, ingredients, and best-before dates.</p>
+      </div>
+      <div class="model-step">
+        <div class="model-step-num">Step 03</div>
+        <h3>You find us in the machine</h3>
+        <p>Our vending machines are stocked fresh and placed at convenient locations — schools, shopping centres, gyms, and more.</p>
+      </div>
+    </div>
+    <div class="about-roadmap">
+      <h3>Our roadmap</h3>
+      <div class="roadmap-phases">
+        <div class="roadmap-phase phase-active">
+          <div class="phase-label">Now — Phase 1</div>
+          <div class="phase-title">Distributor model</div>
+          <div class="phase-desc">Partner bakeries, Loui's branding, vending machines</div>
+        </div>
+        <div class="roadmap-phase">
+          <div class="phase-label">Phase 2</div>
+          <div class="phase-title">Qualification</div>
+          <div class="phase-desc">Working towards our own production licence</div>
+        </div>
+        <div class="roadmap-phase">
+          <div class="phase-label">Phase 3</div>
+          <div class="phase-title">Own production</div>
+          <div class="phase-desc">Full vertical integration — baking our own recipes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATERING -->
+<section class="catering" id="catering">
+  <div class="catering-card">
+    <div class="catering-soon">Coming later in 2026</div>
+    <h2>Catering & events</h2>
+    <p>Birthdays, weddings, corporate events, school celebrations — cupcakes for every occasion. Our catering service is currently in development and will launch later this year. Register your interest and we'll be in touch when it's ready.</p>
+    <div class="catering-occasions">
+      <span class="occasion-pill">🎂 Birthdays</span>
+      <span class="occasion-pill">💒 Weddings</span>
+      <span class="occasion-pill">🏢 Corporate events</span>
+      <span class="occasion-pill">🎓 School events</span>
+      <span class="occasion-pill">🎉 Celebrations</span>
+    </div>
+    <a href="#contact" class="btn-primary">Register your interest</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-eyebrow" style="color:var(--pink);">Get in touch</div>
+  <h2>Let's talk</h2>
+  <p class="contact-sub">Want a machine at your location? Interested in a partnership? Just want to say hello? We'd love to hear from you.</p>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Contact details</h3>
+      <div class="contact-item">
+        <span>📩</span>
+        <a href="mailto:info@louiscupcakes.com">info@louiscupcakes.com</a>
+      </div>
+      <div class="contact-item">
+        <span>📞</span>
+        <a href="tel:+491767791768">+49 176 779 17682</a>
+      </div>
+      <div class="contact-item">
+        <span>📍</span>
+        <span>Saar-Mosel region, Germany</span>
+      </div>
+      <div class="contact-item">
+        <span>📸</span>
+        <a href="https://instagram.com/louiscupcakes.de" target="_blank" rel="noopener">@louiscupcakes.de</a>
+      </div>
+      <div style="margin-top:28px;padding:20px;background:rgba(255,245,236,0.06);border-radius:10px;border:1px solid rgba(255,245,236,0.12);">
+        <p style="font-size:13px;color:rgba(255,245,236,0.6);line-height:1.6;">
+          <strong style="color:var(--pink);">Interested in hosting a machine?</strong><br>
+          We're actively looking for partner locations. Shopping centres, schools, gyms, offices — if you have footfall, we'd love to talk.
+        </p>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="Alston Ponde-Silcott" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="hello@example.com" required />
+      </div>
+      <div class="form-group">
+        <label for="reason">Reason for contact</label>
+        <select id="reason" name="reason">
+          <option value="">Select a reason</option>
+          <option value="location">I'd like to host a vending machine</option>
+          <option value="catering">Catering enquiry (2026)</option>
+          <option value="supplier">Supplier / partnership enquiry</option>
+          <option value="general">General question</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us a bit about your enquiry..."></textarea>
+      </div>
+      <button type="submit" class="btn-pink">Send message</button>
+      <p id="form-success" style="display:none;color:var(--pink);font-size:13px;margin-top:8px;">Thanks! We'll be in touch soon.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Loui's <span>Cupcakes</span></div>
+      <p class="footer-tagline">A modern cupcake distribution brand. Saar-Mosel region, Germany.</p>
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Navigate</div>
+      <div class="footer-links">
+        <a href="#products">Our range</a>
+        <a href="#locations">Locations</a>
+        <a href="#about">About us</a>
+        <a href="#catering">Catering</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Languages</div>
+      <div class="footer-links">
+        <a href="index.html">English</a>
+        <a href="de.html">Deutsch</a>
+        <a href="fr.html">Français</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      © 2026 Loui's Cupcakes by Alston Ponde-Silcott. All cupcakes produced by certified partner bakeries.<br>
+      Distributed by Loui's Cupcakes — Vertrieb von verpackten Backwaren und Süßwaren über Verkaufsautomaten.
+    </div>
+    <div style="display:flex;gap:16px;">
+      <a href="de.html#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Impressum</a>
+      <a href="de.html#datenschutz" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('form-success').style.display = 'block';
+    e.target.reset();
+  }
+</script>
+</body>
+</html>

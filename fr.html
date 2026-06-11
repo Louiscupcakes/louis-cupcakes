@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loui's Cupcakes — Un goût de bonheur</title>
+  <meta name="description" content="Cupcakes premium disponibles 24h/24 dans nos distributeurs automatiques. Produits par des boulangeries partenaires certifiées, distribués sous la marque Loui's Cupcakes." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="fr.html">Loui's <span>Cupcakes</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#products">Notre gamme</a></li>
+    <li><a href="#locations">Distributeurs</a></li>
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#catering">Traiteur</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="nav-lang">
+      <a class="lang-btn" href="index.html">EN</a>
+      <a class="lang-btn" href="de.html">DE</a>
+      <a class="lang-btn active" href="fr.html">FR</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Disponible dans nos distributeurs près de chez vous</div>
+    <h1>Un goût de <em>bonheur.</em></h1>
+    <p class="hero-sub">Des cupcakes premium, produits par des boulangeries partenaires certifiées, emballés sous notre marque et disponibles 24h/24 dans nos distributeurs automatiques.</p>
+    <div class="hero-ctas">
+      <a href="#products" class="btn-primary">Notre gamme</a>
+      <a href="#locations" class="btn-outline">Trouver un distributeur</a>
+    </div>
+    <div class="hero-badges">
+      <span class="hero-badge">🍪 Oreo</span>
+      <span class="hero-badge">🍫 Brownie chocolat</span>
+      <span class="hero-badge">❤️ Red Velvet</span>
+      <span class="hero-badge">🍓 Fraise</span>
+      <span class="hero-badge">+ d'autres</span>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="160" cy="160" r="140" fill="#F7A8B8" opacity="0.18"/>
+      <circle cx="160" cy="160" r="100" fill="#F7A8B8" opacity="0.18"/>
+      <rect x="100" y="185" width="120" height="70" rx="18" fill="#F7A8B8"/>
+      <line x1="130" y1="185" x2="125" y2="255" stroke="#e8889c" stroke-width="2" opacity="0.5"/>
+      <line x1="160" y1="185" x2="160" y2="255" stroke="#e8889c" stroke-width="2" opacity="0.5"/>
+      <line x1="190" y1="185" x2="195" y2="255" stroke="#e8889c" stroke-width="2" opacity="0.5"/>
+      <ellipse cx="160" cy="170" rx="64" ry="38" fill="#FFF5EC"/>
+      <ellipse cx="138" cy="158" rx="22" ry="26" fill="#FFF5EC"/>
+      <ellipse cx="160" cy="148" rx="26" ry="30" fill="#FFF5EC"/>
+      <ellipse cx="182" cy="158" rx="22" ry="26" fill="#FFF5EC"/>
+      <ellipse cx="160" cy="118" rx="18" ry="22" fill="#FFF5EC"/>
+      <circle cx="160" cy="98" r="8" fill="#6B3E2E"/>
+      <rect x="135" y="150" width="8" height="3" rx="1.5" fill="#F7A8B8" transform="rotate(-20 135 150)"/>
+      <rect x="170" y="142" width="8" height="3" rx="1.5" fill="#6B3E2E" transform="rotate(15 170 142)"/>
+      <rect x="150" y="135" width="8" height="3" rx="1.5" fill="#F7A8B8" transform="rotate(-35 150 135)"/>
+      <rect x="178" y="155" width="6" height="3" rx="1.5" fill="#6B3E2E" transform="rotate(25 178 155)"/>
+    </svg>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <h2>Comment ça fonctionne</h2>
+  <p class="how-sub">De la boulangerie partenaire au distributeur automatique — une qualité à chaque étape.</p>
+  <div class="how-steps">
+    <div class="how-step">
+      <div class="how-step-icon">🏭</div>
+      <h3>Boulangeries partenaires</h3>
+      <p>Des boulangeries certifiées produisent nos cupcakes selon nos spécifications exactes et nos critères de qualité.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-icon">📦</div>
+      <h3>Emballage Loui's</h3>
+      <p>Chaque cupcake est emballé individuellement avec notre marque, les informations allergènes et la date limite de consommation.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-icon">🤖</div>
+      <h3>Distributeurs automatiques</h3>
+      <p>Nos distributeurs sont approvisionnés régulièrement et installés dans des lieux stratégiques de la région.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-icon">🧁</div>
+      <h3>Votre plaisir</h3>
+      <p>Choisissez votre parfum, payez, savourez. Un cupcake de qualité quand et où vous le souhaitez.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="section-eyebrow">Notre gamme</div>
+  <h2 class="section-title">Sélection de cupcakes</h2>
+  <p class="section-sub">Une gamme soigneusement choisie — disponible dans nos distributeurs. Des spécialités saisonnières changent tout au long de l'année.</p>
+  <div class="product-notice">
+    <span>🏪</span>
+    <span><strong>Disponible en distributeur uniquement.</strong> Tous les cupcakes sont produits par nos boulangeries partenaires et vendus exclusivement via les distributeurs Loui's Cupcakes.</span>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <span class="product-emoji">🍪</span>
+      <div class="product-name">Cupcake Oreo</div>
+      <div class="product-price">3,50 €</div>
+      <span class="product-tag tag-classic">Classique</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🍫</span>
+      <div class="product-name">Brownie Chocolat</div>
+      <div class="product-price">3,80 €</div>
+      <span class="product-tag tag-special">Signature</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">❤️</span>
+      <div class="product-name">Red Velvet</div>
+      <div class="product-price">3,50 €</div>
+      <span class="product-tag tag-classic">Classique</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🍓</span>
+      <div class="product-name">Fraise & Shortcake</div>
+      <div class="product-price">3,80 €</div>
+      <span class="product-tag tag-special">Signature</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🍋</span>
+      <div class="product-name">Cupcake Citron</div>
+      <div class="product-price">3,50 €</div>
+      <span class="product-tag tag-classic">Classique</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🫐</span>
+      <div class="product-name">Myrtille & Fromage frais</div>
+      <div class="product-price">3,50 €</div>
+      <span class="product-tag tag-classic">Classique</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🍫</span>
+      <div class="product-name">Banane & Chocolat</div>
+      <div class="product-price">3,50 €</div>
+      <span class="product-tag tag-classic">Classique</span>
+    </div>
+    <div class="product-card">
+      <span class="product-emoji">🍂</span>
+      <div class="product-name">Cupcake Potiron</div>
+      <div class="product-price">3,80 €</div>
+      <span class="product-tag tag-seasonal">Saisonnier</span>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations" id="locations">
+  <div class="locations-inner">
+    <div>
+      <div class="section-eyebrow">Nous trouver</div>
+      <h2 class="section-title">Nos distributeurs automatiques</h2>
+      <p class="section-sub">Nous déployons nos premiers distributeurs dans la région Saar-Moselle. Notre objectif : rendre Loui's Cupcakes accessible là où vous vous trouvez déjà.</p>
+      <div class="location-types">
+        <div class="location-type"><span>🛍️</span> Centres commerciaux</div>
+        <div class="location-type"><span>🚉</span> Gares & transports</div>
+        <div class="location-type"><span>🎓</span> Écoles & universités</div>
+        <div class="location-type"><span>💼</span> Parcs d'affaires</div>
+        <div class="location-type"><span>🏋️</span> Salles de sport</div>
+        <div class="location-type"><span>🏥</span> Établissements de santé</div>
+      </div>
+    </div>
+    <div class="coming-soon-map">
+      <div style="font-size:48px;margin-bottom:16px;">📍</div>
+      <h3>Emplacements bientôt disponibles</h3>
+      <p>Nos premiers distributeurs arrivent. Inscrivez-vous pour être informé dès qu'un distributeur Loui's Cupcakes ouvre près de chez vous.</p>
+      <a href="#contact" class="btn-primary" style="background:var(--pink);color:var(--brown);">Être notifié</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="section-eyebrow">À propos</div>
+    <h2 class="section-title">Nous ne sommes pas une boulangerie. Nous sommes une marque de cupcakes.</h2>
+    <p class="section-sub">Loui's Cupcakes par Alston Ponde-Silcott est un concept de distribution moderne fondé sur une idée simple : des cupcakes de qualité disponibles à tout moment et en tout lieu.</p>
+    <div class="about-model">
+      <div class="model-step">
+        <div class="model-step-num">Étape 01</div>
+        <h3>Les boulangeries partenaires produisent</h3>
+        <p>Nous travaillons avec des boulangeries certifiées qui produisent nos cupcakes selon nos recettes et standards de qualité.</p>
+      </div>
+      <div class="model-step">
+        <div class="model-step-num">Étape 02</div>
+        <h3>Loui's emballe & marque</h3>
+        <p>Chaque cupcake est emballé dans nos boîtes Loui's Cupcakes avec les informations allergènes, les ingrédients et la date limite.</p>
+      </div>
+      <div class="model-step">
+        <div class="model-step-num">Étape 03</div>
+        <h3>Vous nous trouvez en distributeur</h3>
+        <p>Nos distributeurs sont approvisionnés frais et installés dans des endroits pratiques — écoles, centres commerciaux, salles de sport.</p>
+      </div>
+    </div>
+    <div class="about-roadmap">
+      <h3>Notre feuille de route</h3>
+      <div class="roadmap-phases">
+        <div class="roadmap-phase phase-active">
+          <div class="phase-label">Maintenant — Phase 1</div>
+          <div class="phase-title">Modèle distributeur</div>
+          <div class="phase-desc">Boulangeries partenaires, marque Loui's, distributeurs</div>
+        </div>
+        <div class="roadmap-phase">
+          <div class="phase-label">Phase 2</div>
+          <div class="phase-title">Qualification</div>
+          <div class="phase-desc">Vers notre propre licence de production</div>
+        </div>
+        <div class="roadmap-phase">
+          <div class="phase-label">Phase 3</div>
+          <div class="phase-title">Production propre</div>
+          <div class="phase-desc">Intégration verticale — nos propres recettes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATERING -->
+<section class="catering" id="catering">
+  <div class="catering-card">
+    <div class="catering-soon">Disponible plus tard en 2026</div>
+    <h2>Traiteur & événements</h2>
+    <p>Anniversaires, mariages, événements d'entreprise, fêtes scolaires — des cupcakes pour chaque occasion. Notre service traiteur est en cours de développement et sera lancé plus tard cette année. Enregistrez votre intérêt et nous vous contacterons dès l'ouverture.</p>
+    <div class="catering-occasions">
+      <span class="occasion-pill">🎂 Anniversaires</span>
+      <span class="occasion-pill">💒 Mariages</span>
+      <span class="occasion-pill">🏢 Événements d'entreprise</span>
+      <span class="occasion-pill">🎓 Fêtes scolaires</span>
+      <span class="occasion-pill">🎉 Célébrations</span>
+    </div>
+    <a href="#contact" class="btn-primary">Enregistrer mon intérêt</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-eyebrow" style="color:var(--pink);">Nous contacter</div>
+  <h2>Parlons-en</h2>
+  <p class="contact-sub">Vous souhaitez un distributeur dans votre établissement ? Intéressé par un partenariat ? Ou juste dire bonjour ? Nous serions ravis de vous entendre.</p>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Coordonnées</h3>
+      <div class="contact-item">
+        <span>📩</span>
+        <a href="mailto:info@louiscupcakes.com">info@louiscupcakes.com</a>
+      </div>
+      <div class="contact-item">
+        <span>📞</span>
+        <a href="tel:+491767791768">+49 176 779 17682</a>
+      </div>
+      <div class="contact-item">
+        <span>📍</span>
+        <span>Région Saar-Moselle, Allemagne</span>
+      </div>
+      <div class="contact-item">
+        <span>📸</span>
+        <a href="https://instagram.com/louiscupcakes.de" target="_blank" rel="noopener">@louiscupcakes.de</a>
+      </div>
+      <div style="margin-top:28px;padding:20px;background:rgba(255,245,236,0.06);border-radius:10px;border:1px solid rgba(255,245,236,0.12);">
+        <p style="font-size:13px;color:rgba(255,245,236,0.6);line-height:1.6;">
+          <strong style="color:var(--pink);">Intéressé par un emplacement distributeur ?</strong><br>
+          Nous recherchons activement des partenaires. Centres commerciaux, écoles, salles de sport, bureaux — si vous avez du passage, parlons-en.
+        </p>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label for="name">Votre nom</label>
+        <input type="text" id="name" name="name" placeholder="Jean Dupont" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Adresse e-mail</label>
+        <input type="email" id="email" name="email" placeholder="bonjour@exemple.fr" required />
+      </div>
+      <div class="form-group">
+        <label for="reason">Motif du contact</label>
+        <select id="reason" name="reason">
+          <option value="">Sélectionner un motif</option>
+          <option value="location">Je souhaite accueillir un distributeur</option>
+          <option value="catering">Demande traiteur (2026)</option>
+          <option value="supplier">Demande fournisseur / partenariat</option>
+          <option value="general">Question générale</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Dites-nous en plus sur votre demande..."></textarea>
+      </div>
+      <button type="submit" class="btn-pink">Envoyer le message</button>
+      <p id="form-success" style="display:none;color:var(--pink);font-size:13px;margin-top:8px;">Merci ! Nous vous répondrons très bientôt.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Loui's <span>Cupcakes</span></div>
+      <p class="footer-tagline">Un concept moderne de distribution de cupcakes. Région Saar-Moselle, Allemagne.</p>
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Navigation</div>
+      <div class="footer-links">
+        <a href="#products">Notre gamme</a>
+        <a href="#locations">Distributeurs</a>
+        <a href="#about">À propos</a>
+        <a href="#catering">Traiteur</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Langues</div>
+      <div class="footer-links">
+        <a href="index.html">English</a>
+        <a href="de.html">Deutsch</a>
+        <a href="fr.html">Français</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      © 2026 Loui's Cupcakes par Alston Ponde-Silcott. Tous les cupcakes sont produits par des boulangeries partenaires certifiées.<br>
+      Distribution de pâtisseries et confiseries emballées via distributeurs automatiques.
+    </div>
+    <div style="display:flex;gap:16px;">
+      <a href="de.html#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Impressum</a>
+      <a href="de.html#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('form-success').style.display = 'block';
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
