@@ -180,6 +180,22 @@ footer{background:var(--cocoa);color:var(--cream);padding:64px 6vw 28px}
   .nav-hamburger{display:flex}
 }
 
+/* ===== SEASONAL THEMES ===== */
+body.season-spring{--raspberry:#D95FA0;--raspberry-deep:#B8407F;--caramel:#7FA15A;--blush:#FCE7F1}
+body.season-summer{--raspberry:#E2475C;--raspberry-deep:#C22F44;--caramel:#E8A93D;--blush:#FFE9E0}
+body.season-autumn{--raspberry:#C2562B;--raspberry-deep:#9E4220;--caramel:#B7791F;--blush:#F9E4D4}
+body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913D;--blush:#EAF1F7}
+.season-particles{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:4}
+.season-particle{position:absolute;top:0;will-change:transform;animation:season-fall linear infinite;opacity:.8}
+.season-particle.glyph{line-height:1}
+.season-particle.confetti{border-radius:2px}
+@keyframes season-fall{
+  0%{transform:translate3d(0,-8vh,0) rotate(0deg)}
+  100%{transform:translate3d(var(--sway,0px),108vh,0) rotate(var(--spin,360deg))}
+}
+.product-card.in-season{box-shadow:0 0 0 3px var(--raspberry),var(--shadow-md)}
+@media (prefers-reduced-motion:reduce){.season-particles{display:none}}
+
 </style>
 </head>
 <body>
@@ -535,6 +551,54 @@ footer{background:var(--cocoa);color:var(--cream);padding:64px 6vw 28px}
   const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
   revealEls.forEach(el=>io.observe(el));
 
+
+  // ===== Seasonal theme & particles =====
+  (function(){
+    const m = new Date().getMonth()+1;
+    const season = m>=3&&m<=5?'spring':m>=6&&m<=8?'summer':m>=9&&m<=11?'autumn':'winter';
+    document.body.classList.add('season-'+season);
+
+    // Highlight the in-season cupcake (order: spring, summer, autumn, winter)
+    const grids = document.querySelectorAll('.products-grid');
+    if (grids[1]) {
+      const idx = {spring:0,summer:1,autumn:2,winter:3}[season];
+      const card = grids[1].querySelectorAll('.product-card')[idx];
+      if (card) card.classList.add('in-season');
+    }
+
+    // Falling particles
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const wrap = document.createElement('div');
+    wrap.className = 'season-particles';
+    wrap.setAttribute('aria-hidden','true');
+    const small = window.matchMedia('(max-width: 700px)').matches;
+    const count = small ? 12 : 22;
+    const confettiColors = ['#E2475C','#E8A93D','#F7A8B8','#8FAE5D','#FFFFFF'];
+    const glyphs = {winter:['❄','❅','✻'],autumn:['🍂','🍁'],spring:['🌸','✿']}[season];
+    for (let i=0;i<count;i++){
+      const p = document.createElement('span');
+      p.className = 'season-particle';
+      p.style.left = Math.random()*100+'vw';
+      p.style.setProperty('--sway',(Math.random()*160-80)+'px');
+      p.style.setProperty('--spin',(Math.random()*520+180)+'deg');
+      p.style.animationDuration = (Math.random()*10+8)+'s';
+      p.style.animationDelay = (-Math.random()*18)+'s';
+      if (season==='summer'){
+        p.classList.add('confetti');
+        const s = Math.random()*6+5;
+        p.style.width = s+'px';
+        p.style.height = (s*1.8)+'px';
+        p.style.background = confettiColors[Math.floor(Math.random()*confettiColors.length)];
+      } else {
+        p.classList.add('glyph');
+        p.textContent = glyphs[Math.floor(Math.random()*glyphs.length)];
+        p.style.fontSize = (Math.random()*12+11)+'px';
+        if (season==='winter'){ p.style.color = '#B9D4EC'; }
+      }
+      wrap.appendChild(p);
+    }
+    document.body.appendChild(wrap);
+  })();
 </script>
 </body>
 </html>
