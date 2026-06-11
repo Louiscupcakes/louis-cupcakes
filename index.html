@@ -6,6 +6,17 @@
   <title>Loui's Cupcakes — A Taste of Happiness</title>
   <meta name="description" content="Premium cupcakes available 24/7 through our vending machine network. Sourced from trusted partner bakeries, branded and distributed by Loui's Cupcakes." />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .product-card { display:flex; flex-direction:column; padding:0; overflow:hidden; }
+    .product-img-wrap { width:100%; height:200px; overflow:hidden; }
+    .product-img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease; }
+    .product-card:hover .product-img { transform:scale(1.05); }
+    .product-info { padding:20px; display:flex; flex-direction:column; gap:10px; flex:1; }
+    .product-desc { font-size:13px; line-height:1.6; opacity:0.72; flex:1; }
+    .product-footer { display:flex; align-items:center; justify-content:space-between; margin-top:8px; }
+    .products-range-label { text-align:center; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--pink); margin:48px 0 24px; }
+    .products-range-label--seasonal { margin-top:64px; }
+  </style>
 </head>
 <body>
 
@@ -36,7 +47,7 @@
   <div class="hero-content">
     <div class="hero-eyebrow">Available at vending machines near you</div>
     <h1>A taste of <em>happiness.</em></h1>
-    <p class="hero-sub">Premium cupcakes, sourced from trusted partner bakeries, packaged under our brand and brought directly to you — 24/7, wherever you are.</p>
+    <p class="hero-sub">We've hunted down the finest bakeries in the region so you don't have to. The result? Irresistible cupcakes, available 24/7 — whenever the craving hits.</p>
     <div class="hero-ctas">
       <a href="#products" class="btn-primary">See our range</a>
       <a href="#locations" class="btn-outline">Find a machine</a>
@@ -78,28 +89,28 @@
 
 <!-- HOW IT WORKS -->
 <section class="how">
-  <h2>How it works</h2>
-  <p class="how-sub">From partner bakery to vending machine — quality you can trust at every step.</p>
+  <h2>Only the best make the cut</h2>
+  <p class="how-sub">We're obsessive about flavour. Here's how we bring you something truly special.</p>
   <div class="how-steps">
     <div class="how-step">
-      <div class="how-step-icon">🏭</div>
-      <h3>Partner bakeries</h3>
-      <p>Certified bakeries produce cupcakes to our exact specification and quality standards.</p>
+      <div class="how-step-icon">🔍</div>
+      <h3>We seek out the finest</h3>
+      <p>We scout the region's best bakeries, tasting and testing until we find the ones that truly stand out.</p>
     </div>
     <div class="how-step">
-      <div class="how-step-icon">📦</div>
-      <h3>Loui's packaging</h3>
-      <p>Every cupcake is individually packaged with our branding, allergen info, and best-before date.</p>
+      <div class="how-step-icon">✨</div>
+      <h3>We curate the selection</h3>
+      <p>Only the recipes that make our mouths water make it onto the menu. No compromises.</p>
     </div>
     <div class="how-step">
-      <div class="how-step-icon">🤖</div>
-      <h3>Vending machines</h3>
-      <p>Our machines are stocked fresh and placed at convenient locations across the region.</p>
+      <div class="how-step-icon">📍</div>
+      <h3>We bring them to you</h3>
+      <p>Fresh cupcakes, stocked at locations across the region — so the best is always within reach.</p>
     </div>
     <div class="how-step">
       <div class="how-step-icon">🧁</div>
-      <h3>Your treat</h3>
-      <p>Pick your flavour, pay, enjoy. A quality cupcake whenever and wherever you need one.</p>
+      <h3>You just enjoy</h3>
+      <p>Pick your flavour and indulge. Bakery-quality, 24/7, no queue.</p>
     </div>
   </div>
 </section>
@@ -107,60 +118,145 @@
 <!-- PRODUCTS -->
 <section class="products" id="products">
   <div class="section-eyebrow">Our range</div>
-  <h2 class="section-title">Cupcake selection</h2>
-  <p class="section-sub">A carefully chosen range of flavours — available at our vending machine locations. Seasonal specials rotate throughout the year.</p>
-  <div class="product-notice">
-    <span>🏪</span>
-    <span><strong>Available in-machine only.</strong> All cupcakes are produced by our partner bakeries and sold exclusively through Loui's Cupcakes vending machines.</span>
-  </div>
+  <h2 class="section-title">Flavours to fall for</h2>
+  <p class="section-sub">Selected from the finest bakeries in the region — every flavour chosen because it made us stop mid-bite.</p>
+
+  <div class="products-range-label">Always available</div>
   <div class="products-grid">
     <div class="product-card">
-      <span class="product-emoji">🍪</span>
-      <div class="product-name">Oreo Cupcake</div>
-      <div class="product-price">€3.50</div>
-      <span class="product-tag tag-classic">Classic</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&h=300&fit=crop&auto=format" alt="Oreo Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Oreo Cupcake</div>
+        <div class="product-desc">Velvety vanilla sponge topped with a cloud of cookies & cream frosting and a full Oreo on top. A crowd-pleaser from the first bite.</div>
+        <div class="product-footer">
+          <div class="product-price">€3.50</div>
+          <span class="product-tag tag-classic">Always available</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍫</span>
-      <div class="product-name">Chocolate Brownie</div>
-      <div class="product-price">€3.80</div>
-      <span class="product-tag tag-special">Signature</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=400&h=300&fit=crop&auto=format" alt="Chocolate Brownie Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Chocolate Brownie Cupcake</div>
+        <div class="product-desc">Dense, fudgy brownie-style sponge loaded with dark chocolate chips, crowned with a rich chocolate ganache swirl. For the serious chocolate lover.</div>
+        <div class="product-footer">
+          <div class="product-price">€3.80</div>
+          <span class="product-tag tag-special">Signature</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">❤️</span>
-      <div class="product-name">Red Velvet</div>
-      <div class="product-price">€3.50</div>
-      <span class="product-tag tag-classic">Classic</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&h=300&fit=crop&q=60&auto=format&sat=-30&hue=340" alt="Red Velvet Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Red Velvet Cupcake</div>
+        <div class="product-desc">Stunning crimson sponge with a hint of cocoa, finished with a generous swirl of silky cream cheese frosting. Classic, elegant, irresistible.</div>
+        <div class="product-footer">
+          <div class="product-price">€3.50</div>
+          <span class="product-tag tag-classic">Always available</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍓</span>
-      <div class="product-name">Strawberry Shortcake</div>
-      <div class="product-price">€3.80</div>
-      <span class="product-tag tag-special">Signature</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=400&h=300&fit=crop&auto=format" alt="Carrot Cake Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Carrot Cake Cupcake</div>
+        <div class="product-desc">Warmly spiced with cinnamon and nutmeg, packed with freshly grated carrot and topped with a dreamy cream cheese frosting. Comfort in every bite.</div>
+        <div class="product-footer">
+          <div class="product-price">€3.50</div>
+          <span class="product-tag tag-classic">Always available</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍋</span>
-      <div class="product-name">Lemon Cupcake</div>
-      <div class="product-price">€3.50</div>
-      <span class="product-tag tag-classic">Classic</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1558303485-4e25024a9f71?w=400&h=300&fit=crop&auto=format" alt="Blueberry Cream Cheese Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Blueberry Cream Cheese Cupcake</div>
+        <div class="product-desc">Bursting with juicy blueberries baked right into the sponge, topped with a tangy cream cheese swirl and fresh blueberries. Sweet meets sharp, perfectly.</div>
+        <div class="product-footer">
+          <div class="product-price">€3.50</div>
+          <span class="product-tag tag-classic">Always available</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🫐</span>
-      <div class="product-name">Blueberry Cream Cheese</div>
-      <div class="product-price">€3.50</div>
-      <span class="product-tag tag-classic">Classic</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=400&h=300&fit=crop&auto=format" alt="Chocolate Banana Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Chocolate Banana Cupcake</div>
+        <div class="product-desc">Moist banana sponge swirled through with dark chocolate, topped with chocolate buttercream and a caramelised banana chip. A match made in heaven.</div>
+        <div class="product-footer">
+          <div class="product-price">€3.50</div>
+          <span class="product-tag tag-classic">Always available</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="products-range-label products-range-label--seasonal">The Four Seasons 🍂🌸☀️❄️</div>
+  <p class="section-sub" style="text-align:center;margin-bottom:32px;">Our seasonal cupcakes change with the year — always something to look forward to.</p>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1609079850770-dd9a8b6c1086?w=400&h=300&fit=crop&auto=format" alt="Spring Sprinkle Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Spring Sprinkle Cupcake</div>
+        <div class="product-desc">Light vanilla sponge with a pastel rainbow buttercream and a joyful shower of sprinkles. Bright, cheerful and impossible to resist — just like spring.</div>
+        <div class="product-footer">
+          <div class="product-price">€3.80</div>
+          <span class="product-tag tag-seasonal">🌸 Spring</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍫</span>
-      <div class="product-name">Banana Chocolate</div>
-      <div class="product-price">€3.50</div>
-      <span class="product-tag tag-classic">Classic</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop&auto=format" alt="Strawberry Shortcake Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Strawberry Shortcake Cupcake</div>
+        <div class="product-desc">Fluffy shortcake sponge layered with fresh strawberry compote and topped with whipped cream frosting and a whole strawberry. Summer in your hand.</div>
+        <div class="product-footer">
+          <div class="product-price">€3.80</div>
+          <span class="product-tag tag-seasonal">☀️ Summer</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍂</span>
-      <div class="product-name">Pumpkin Cupcake</div>
-      <div class="product-price">€3.80</div>
-      <span class="product-tag tag-seasonal">Seasonal</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1570145820259-b5b80c5c8bd6?w=400&h=300&fit=crop&auto=format" alt="Pumpkin Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Pumpkin Cupcake</div>
+        <div class="product-desc">Spiced pumpkin sponge with hints of ginger and cinnamon, finished with a cinnamon cream cheese frosting and a dusting of autumnal spice. Autumn in a bite.</div>
+        <div class="product-footer">
+          <div class="product-price">€3.80</div>
+          <span class="product-tag tag-seasonal">🍂 Autumn</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1612203985729-70726954388c?w=400&h=300&fit=crop&auto=format" alt="Apple Crumble Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Apple Crumble Cupcake</div>
+        <div class="product-desc">Soft apple and cinnamon sponge with a buttery crumble topping and warm vanilla frosting. Like a hug on a cold winter's day.</div>
+        <div class="product-footer">
+          <div class="product-price">€3.80</div>
+          <span class="product-tag tag-seasonal">❄️ Winter</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -194,43 +290,23 @@
 <section class="about" id="about">
   <div class="about-inner">
     <div class="section-eyebrow">About us</div>
-    <h2 class="section-title">We're not a bakery. We're a cupcake brand.</h2>
-    <p class="section-sub">Loui's Cupcakes by Alston Ponde-Silcott is a modern distribution concept built around one idea: great cupcakes should be available whenever and wherever you want them.</p>
+    <h2 class="section-title">Obsessed with finding the perfect cupcake.</h2>
+    <p class="section-sub">Loui's Cupcakes is built on a simple obsession: bringing the very best cupcakes in the region to you — wherever you are, whenever you want them.</p>
     <div class="about-model">
       <div class="model-step">
-        <div class="model-step-num">Step 01</div>
-        <h3>Partner bakeries produce</h3>
-        <p>We work with certified partner bakeries who produce cupcakes to our exact recipe and quality specification.</p>
+        <div class="model-step-num">Our mission</div>
+        <h3>Only the finest make the cut</h3>
+        <p>We've tasted our way through the region's bakeries so we can hand-pick only the recipes that are truly worth your time — and your taste buds.</p>
       </div>
       <div class="model-step">
-        <div class="model-step-num">Step 02</div>
-        <h3>Loui's brands & packages</h3>
-        <p>Every cupcake is packaged in Loui's Cupcakes branded boxes with allergen information, ingredients, and best-before dates.</p>
+        <div class="model-step-num">Our promise</div>
+        <h3>Bakery quality, always fresh</h3>
+        <p>Every cupcake in our machines is held to the same standard as what you'd expect walking into the best patisserie in town. No shortcuts.</p>
       </div>
       <div class="model-step">
-        <div class="model-step-num">Step 03</div>
-        <h3>You find us in the machine</h3>
-        <p>Our vending machines are stocked fresh and placed at convenient locations — schools, shopping centres, gyms, and more.</p>
-      </div>
-    </div>
-    <div class="about-roadmap">
-      <h3>Our roadmap</h3>
-      <div class="roadmap-phases">
-        <div class="roadmap-phase phase-active">
-          <div class="phase-label">Now — Phase 1</div>
-          <div class="phase-title">Distributor model</div>
-          <div class="phase-desc">Partner bakeries, Loui's branding, vending machines</div>
-        </div>
-        <div class="roadmap-phase">
-          <div class="phase-label">Phase 2</div>
-          <div class="phase-title">Qualification</div>
-          <div class="phase-desc">Working towards our own production licence</div>
-        </div>
-        <div class="roadmap-phase">
-          <div class="phase-label">Phase 3</div>
-          <div class="phase-title">Own production</div>
-          <div class="phase-desc">Full vertical integration — baking our own recipes</div>
-        </div>
+        <div class="model-step-num">Our vision</div>
+        <h3>A treat within everyone's reach</h3>
+        <p>We're placing our machines at the spots you already pass through — because a moment of joy shouldn't require a detour.</p>
       </div>
     </div>
   </div>
@@ -318,7 +394,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-logo">Loui's <span>Cupcakes</span></div>
-      <p class="footer-tagline">A modern cupcake distribution brand. Saar-Mosel region, Germany.</p>
+      <p class="footer-tagline">The finest cupcakes in the region, always within reach.</p>
     </div>
     <div>
       <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Navigate</div>
@@ -341,8 +417,7 @@
   </div>
   <div class="footer-bottom">
     <div class="footer-legal">
-      © 2026 Loui's Cupcakes by Alston Ponde-Silcott. All cupcakes produced by certified partner bakeries.<br>
-      Distributed by Loui's Cupcakes — Vertrieb von verpackten Backwaren und Süßwaren über Verkaufsautomaten.
+      © 2026 Loui's Cupcakes by Alston Ponde-Silcott. All rights reserved.
     </div>
     <div style="display:flex;gap:16px;">
       <a href="de.html#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Impressum</a>

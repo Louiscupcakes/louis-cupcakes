@@ -6,6 +6,17 @@
   <title>Loui's Cupcakes — Ein Geschmack voller Glück</title>
   <meta name="description" content="Premium Cupcakes, 24/7 erhältlich an unseren Verkaufsautomaten. Von zertifizierten Partnerbäckereien hergestellt, unter der Marke Loui's Cupcakes vertrieben." />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .product-card { display:flex; flex-direction:column; padding:0; overflow:hidden; }
+    .product-img-wrap { width:100%; height:200px; overflow:hidden; }
+    .product-img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease; }
+    .product-card:hover .product-img { transform:scale(1.05); }
+    .product-info { padding:20px; display:flex; flex-direction:column; gap:10px; flex:1; }
+    .product-desc { font-size:13px; line-height:1.6; opacity:0.72; flex:1; }
+    .product-footer { display:flex; align-items:center; justify-content:space-between; margin-top:8px; }
+    .products-range-label { text-align:center; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--pink); margin:48px 0 24px; }
+    .products-range-label--seasonal { margin-top:64px; }
+  </style>
 </head>
 <body>
 
@@ -36,7 +47,7 @@
   <div class="hero-content">
     <div class="hero-eyebrow">Jetzt an Verkaufsautomaten in Ihrer Nähe</div>
     <h1>Ein Geschmack voller <em>Glück.</em></h1>
-    <p class="hero-sub">Premium Cupcakes von zertifizierten Partnerbäckereien — unter unserer Marke verpackt und 24/7 über unsere Verkaufsautomaten direkt zu Ihnen gebracht.</p>
+    <p class="hero-sub">Wir haben die besten Bäckereien der Region aufgespürt — damit Sie das nicht müssen. Das Ergebnis? Unwiderstehliche Cupcakes, 24/7 verfügbar — wann immer der Hunger kommt.</p>
     <div class="hero-ctas">
       <a href="#products" class="btn-primary">Unser Sortiment</a>
       <a href="#locations" class="btn-outline">Automat finden</a>
@@ -73,28 +84,28 @@
 
 <!-- HOW IT WORKS -->
 <section class="how">
-  <h2>So funktioniert es</h2>
-  <p class="how-sub">Von der Partnerbäckerei bis zum Verkaufsautomaten — Qualität, der Sie vertrauen können.</p>
+  <h2>Nur das Beste kommt rein</h2>
+  <p class="how-sub">Wir sind besessen von Geschmack. So bringen wir Ihnen etwas wirklich Besonderes.</p>
   <div class="how-steps">
     <div class="how-step">
-      <div class="how-step-icon">🏭</div>
-      <h3>Partnerbäckereien</h3>
-      <p>Zertifizierte Bäckereien produzieren Cupcakes nach unserer genauen Spezifikation und Qualitätsstandards.</p>
+      <div class="how-step-icon">🔍</div>
+      <h3>Wir suchen das Feinste</h3>
+      <p>Wir kosten und testen uns durch die besten Bäckereien der Region — bis wir die wirklich außergewöhnlichen gefunden haben.</p>
     </div>
     <div class="how-step">
-      <div class="how-step-icon">📦</div>
-      <h3>Loui's Verpackung</h3>
-      <p>Jeder Cupcake wird einzeln mit unserem Branding, Allergeninformationen und Mindesthaltbarkeitsdatum verpackt.</p>
+      <div class="how-step-icon">✨</div>
+      <h3>Wir kuratieren die Auswahl</h3>
+      <p>Nur Rezepte, die uns selbst begeistern, kommen auf die Karte. Keine Kompromisse.</p>
     </div>
     <div class="how-step">
-      <div class="how-step-icon">🤖</div>
-      <h3>Verkaufsautomaten</h3>
-      <p>Unsere Automaten werden frisch befüllt und an praktischen Standorten in der Region aufgestellt.</p>
+      <div class="how-step-icon">📍</div>
+      <h3>Wir bringen sie zu Ihnen</h3>
+      <p>Frische Cupcakes an Standorten in der ganzen Region — das Beste immer in Ihrer Nähe.</p>
     </div>
     <div class="how-step">
       <div class="how-step-icon">🧁</div>
-      <h3>Ihr Genuss</h3>
-      <p>Geschmack wählen, bezahlen, genießen. Ein hochwertiger Cupcake — wann und wo immer Sie möchten.</p>
+      <h3>Sie genießen einfach</h3>
+      <p>Geschmack wählen und genießen. Bäckerei-Qualität, 24/7, ohne Anstehen.</p>
     </div>
   </div>
 </section>
@@ -102,60 +113,145 @@
 <!-- PRODUCTS -->
 <section class="products" id="products">
   <div class="section-eyebrow">Unser Sortiment</div>
-  <h2 class="section-title">Cupcake-Auswahl</h2>
-  <p class="section-sub">Eine sorgfältig zusammengestellte Auswahl an Geschmacksrichtungen — erhältlich an unseren Verkaufsautomaten. Saisonale Spezialitäten wechseln regelmäßig.</p>
-  <div class="product-notice">
-    <span>🏪</span>
-    <span><strong>Nur am Automaten erhältlich.</strong> Alle Cupcakes werden von unseren Partnerbäckereien hergestellt und ausschließlich über Loui's Cupcakes Automaten verkauft.</span>
-  </div>
+  <h2 class="section-title">Geschmacksrichtungen zum Verlieben</h2>
+  <p class="section-sub">Ausgewählt aus den besten Bäckereien der Region — jede Sorte wurde aufgenommen, weil sie uns beim ersten Bissen sprachlos gemacht hat.</p>
+
+  <div class="products-range-label">Immer verfügbar</div>
   <div class="products-grid">
     <div class="product-card">
-      <span class="product-emoji">🍪</span>
-      <div class="product-name">Oreo Cupcake</div>
-      <div class="product-price">3,50 €</div>
-      <span class="product-tag tag-classic">Klassiker</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&h=300&fit=crop&auto=format" alt="Oreo Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Oreo Cupcake</div>
+        <div class="product-desc">Samtiger Vanilleteig mit einer Wolke aus Cookies & Cream-Frosting und einem ganzen Oreo obendrauf. Ein Publikumsliebling vom ersten Bissen an.</div>
+        <div class="product-footer">
+          <div class="product-price">3,50 €</div>
+          <span class="product-tag tag-classic">Immer verfügbar</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍫</span>
-      <div class="product-name">Chocolate Brownie</div>
-      <div class="product-price">3,80 €</div>
-      <span class="product-tag tag-special">Signature</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=400&h=300&fit=crop&auto=format" alt="Chocolate Brownie Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Chocolate Brownie Cupcake</div>
+        <div class="product-desc">Dichter, fudgiger Brownie-Teig voller dunkler Schokoladenstücke, gekrönt von einer satten Schokoladenganache. Für den ernsthaften Schokoladenliebhaber.</div>
+        <div class="product-footer">
+          <div class="product-price">3,80 €</div>
+          <span class="product-tag tag-special">Signature</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">❤️</span>
-      <div class="product-name">Red Velvet</div>
-      <div class="product-price">3,50 €</div>
-      <span class="product-tag tag-classic">Klassiker</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&h=300&fit=crop&q=60&auto=format" alt="Red Velvet Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Red Velvet Cupcake</div>
+        <div class="product-desc">Beeindruckender roter Teig mit einem Hauch Kakao, verfeinert mit einer großzügigen Swirl aus seidigem Frischkäse-Frosting. Klassisch, elegant, unwiderstehlich.</div>
+        <div class="product-footer">
+          <div class="product-price">3,50 €</div>
+          <span class="product-tag tag-classic">Immer verfügbar</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍓</span>
-      <div class="product-name">Strawberry Shortcake</div>
-      <div class="product-price">3,80 €</div>
-      <span class="product-tag tag-special">Signature</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=400&h=300&fit=crop&auto=format" alt="Carrot Cake Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Carrot Cake Cupcake</div>
+        <div class="product-desc">Warm gewürzt mit Zimt und Muskat, gefüllt mit frisch geriebenem Karotten und gekrönt von einem cremigen Frischkäse-Frosting. Geborgenheit in jedem Bissen.</div>
+        <div class="product-footer">
+          <div class="product-price">3,50 €</div>
+          <span class="product-tag tag-classic">Immer verfügbar</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍋</span>
-      <div class="product-name">Zitronen-Cupcake</div>
-      <div class="product-price">3,50 €</div>
-      <span class="product-tag tag-classic">Klassiker</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1558303485-4e25024a9f71?w=400&h=300&fit=crop&auto=format" alt="Blaubeere & Frischkäse Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Blaubeere & Frischkäse Cupcake</div>
+        <div class="product-desc">Prall gefüllt mit saftigen Blaubeeren im Teig, getoppt mit einer würzigen Frischkäse-Swirl und frischen Beeren. Süß trifft herb — perfekt ausbalanciert.</div>
+        <div class="product-footer">
+          <div class="product-price">3,50 €</div>
+          <span class="product-tag tag-classic">Immer verfügbar</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🫐</span>
-      <div class="product-name">Blaubeere & Frischkäse</div>
-      <div class="product-price">3,50 €</div>
-      <span class="product-tag tag-classic">Klassiker</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=400&h=300&fit=crop&auto=format" alt="Bananen-Schokolade Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Bananen-Schokolade Cupcake</div>
+        <div class="product-desc">Saftiger Bananenkuchen mit dunkler Schokolade, getoppt mit Schokoladen-Buttercreme und einem karamellisierten Bananenchip. Eine Kombination wie gemacht füreinander.</div>
+        <div class="product-footer">
+          <div class="product-price">3,50 €</div>
+          <span class="product-tag tag-classic">Immer verfügbar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="products-range-label products-range-label--seasonal">Die vier Jahreszeiten 🍂🌸☀️❄️</div>
+  <p class="section-sub" style="text-align:center;margin-bottom:32px;">Unsere saisonalen Cupcakes wechseln mit dem Jahr — immer etwas, worauf man sich freuen kann.</p>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1609079850770-dd9a8b6c1086?w=400&h=300&fit=crop&auto=format" alt="Frühlingsstreusel Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Frühlingsstreusel Cupcake</div>
+        <div class="product-desc">Leichter Vanilleteig mit pastellfarbenem Regenbogen-Buttercreme und fröhlichem Streuselregen. Hell, fröhlich und unwiderstehlich — genau wie der Frühling.</div>
+        <div class="product-footer">
+          <div class="product-price">3,80 €</div>
+          <span class="product-tag tag-seasonal">🌸 Frühling</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍫</span>
-      <div class="product-name">Bananen-Schokolade</div>
-      <div class="product-price">3,50 €</div>
-      <span class="product-tag tag-classic">Klassiker</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop&auto=format" alt="Erdbeer-Shortcake Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Erdbeer-Shortcake Cupcake</div>
+        <div class="product-desc">Luftiger Shortcake-Teig mit frischem Erdbeerkompott und Schlagsahne-Frosting, gekrönt von einer ganzen Erdbeere. Sommer in der Hand.</div>
+        <div class="product-footer">
+          <div class="product-price">3,80 €</div>
+          <span class="product-tag tag-seasonal">☀️ Sommer</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍂</span>
-      <div class="product-name">Kürbis-Cupcake</div>
-      <div class="product-price">3,80 €</div>
-      <span class="product-tag tag-seasonal">Saisonal</span>
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1570145820259-b5b80c5c8bd6?w=400&h=300&fit=crop&auto=format" alt="Kürbis Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Kürbis Cupcake</div>
+        <div class="product-desc">Gewürzter Kürbiskuchen mit Ingwer und Zimt, verfeinert mit Zimt-Frischkäse-Frosting und einem Hauch Herbstgewürz. Herbst in einem Bissen.</div>
+        <div class="product-footer">
+          <div class="product-price">3,80 €</div>
+          <span class="product-tag tag-seasonal">🍂 Herbst</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1612203985729-70726954388c?w=400&h=300&fit=crop&auto=format" alt="Apfelcrumble Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Apfelcrumble Cupcake</div>
+        <div class="product-desc">Weicher Apfel-Zimt-Teig mit knusprigem Streuselbelag und warmem Vanille-Frosting. Wie eine Umarmung an einem kalten Wintertag.</div>
+        <div class="product-footer">
+          <div class="product-price">3,80 €</div>
+          <span class="product-tag tag-seasonal">❄️ Winter</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -187,45 +283,27 @@
 
 <!-- ABOUT -->
 <section class="about" id="about">
+<!-- ABOUT -->
+<section class="about" id="about">
   <div class="about-inner">
     <div class="section-eyebrow">Über uns</div>
-    <h2 class="section-title">Wir sind keine Bäckerei. Wir sind eine Cupcake-Marke.</h2>
-    <p class="section-sub">Loui's Cupcakes von Alston Ponde-Silcott ist ein modernes Vertriebskonzept, das auf einer einfachen Idee basiert: Hochwertige Cupcakes sollen jederzeit und überall verfügbar sein.</p>
+    <h2 class="section-title">Besessen vom perfekten Cupcake.</h2>
+    <p class="section-sub">Loui's Cupcakes wurde aus einer einfachen Leidenschaft geboren: die besten Cupcakes der Region zu Ihnen zu bringen — überall und jederzeit.</p>
     <div class="about-model">
       <div class="model-step">
-        <div class="model-step-num">Schritt 01</div>
-        <h3>Partnerbäckereien produzieren</h3>
-        <p>Wir arbeiten mit zertifizierten Partnerbäckereien zusammen, die Cupcakes nach unseren genauen Rezepturen und Qualitätsstandards herstellen.</p>
+        <div class="model-step-num">Unsere Mission</div>
+        <h3>Nur das Feinste kommt rein</h3>
+        <p>Wir verkosten uns durch die Bäckereien der Region, um nur die Rezepte herauszupicken, die wirklich Ihren Gaumen verzaubern.</p>
       </div>
       <div class="model-step">
-        <div class="model-step-num">Schritt 02</div>
-        <h3>Loui's verpackt & brandmarkt</h3>
-        <p>Jeder Cupcake wird in Loui's Cupcakes Verpackung mit Allergeninformationen, Zutaten und Mindesthaltbarkeitsdatum versehen.</p>
+        <div class="model-step-num">Unser Versprechen</div>
+        <h3>Bäckerei-Qualität, immer frisch</h3>
+        <p>Jeder Cupcake in unseren Automaten hält denselben Standard wie in der besten Konditorei der Stadt. Keine Abstriche.</p>
       </div>
       <div class="model-step">
-        <div class="model-step-num">Schritt 03</div>
-        <h3>Sie finden uns am Automaten</h3>
-        <p>Unsere Automaten werden frisch befüllt und an praktischen Standorten aufgestellt — Schulen, Einkaufszentren, Fitnessstudios und mehr.</p>
-      </div>
-    </div>
-    <div class="about-roadmap">
-      <h3>Unser Fahrplan</h3>
-      <div class="roadmap-phases">
-        <div class="roadmap-phase phase-active">
-          <div class="phase-label">Jetzt — Phase 1</div>
-          <div class="phase-title">Vertriebsmodell</div>
-          <div class="phase-desc">Partnerbäckereien, Loui's Branding, Verkaufsautomaten</div>
-        </div>
-        <div class="roadmap-phase">
-          <div class="phase-label">Phase 2</div>
-          <div class="phase-title">Qualifikation</div>
-          <div class="phase-desc">Weg zur eigenen Produktionslizenz</div>
-        </div>
-        <div class="roadmap-phase">
-          <div class="phase-label">Phase 3</div>
-          <div class="phase-title">Eigenproduktion</div>
-          <div class="phase-desc">Vollständige vertikale Integration — eigene Rezepte</div>
-        </div>
+        <div class="model-step-num">Unsere Vision</div>
+        <h3>Genuss für alle, überall</h3>
+        <p>Wir stellen unsere Automaten dort auf, wo Sie ohnehin vorbeikommen — weil ein Moment des Glücks keinen Umweg braucht.</p>
       </div>
     </div>
   </div>
@@ -313,7 +391,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-logo">Loui's <span>Cupcakes</span></div>
-      <p class="footer-tagline">Ein modernes Cupcake-Vertriebskonzept. Saar-Mosel-Region, Deutschland.</p>
+      <p class="footer-tagline">Die besten Cupcakes der Region — immer in Ihrer Nähe.</p>
     </div>
     <div>
       <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Navigation</div>
@@ -336,8 +414,7 @@
   </div>
   <div class="footer-bottom">
     <div class="footer-legal" id="impressum">
-      © 2026 Loui's Cupcakes von Alston Ponde-Silcott. Alle Cupcakes werden von zertifizierten Partnerbäckereien hergestellt.<br>
-      Vertrieb von verpackten Backwaren und Süßwaren über Verkaufsautomaten. Angaben gemäß § 5 TMG folgen.
+      © 2026 Loui's Cupcakes von Alston Ponde-Silcott. Alle Rechte vorbehalten.
     </div>
     <div style="display:flex;gap:16px;">
       <a href="#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Impressum</a>

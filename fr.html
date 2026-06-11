@@ -6,6 +6,17 @@
   <title>Loui's Cupcakes — Un goût de bonheur</title>
   <meta name="description" content="Cupcakes premium disponibles 24h/24 dans nos distributeurs automatiques. Produits par des boulangeries partenaires certifiées, distribués sous la marque Loui's Cupcakes." />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .product-card { display:flex; flex-direction:column; padding:0; overflow:hidden; }
+    .product-img-wrap { width:100%; height:200px; overflow:hidden; }
+    .product-img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease; }
+    .product-card:hover .product-img { transform:scale(1.05); }
+    .product-info { padding:20px; display:flex; flex-direction:column; gap:10px; flex:1; }
+    .product-desc { font-size:13px; line-height:1.6; opacity:0.72; flex:1; }
+    .product-footer { display:flex; align-items:center; justify-content:space-between; margin-top:8px; }
+    .products-range-label { text-align:center; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--pink); margin:48px 0 24px; }
+    .products-range-label--seasonal { margin-top:64px; }
+  </style>
 </head>
 <body>
 
@@ -36,7 +47,7 @@
   <div class="hero-content">
     <div class="hero-eyebrow">Disponible dans nos distributeurs près de chez vous</div>
     <h1>Un goût de <em>bonheur.</em></h1>
-    <p class="hero-sub">Des cupcakes premium, produits par des boulangeries partenaires certifiées, emballés sous notre marque et disponibles 24h/24 dans nos distributeurs automatiques.</p>
+    <p class="hero-sub">Nous avons parcouru la région pour dénicher les meilleures boulangeries — pour que vous n'ayez pas à le faire. Le résultat ? Des cupcakes irrésistibles, disponibles 24h/24, quand l'envie se fait sentir.</p>
     <div class="hero-ctas">
       <a href="#products" class="btn-primary">Notre gamme</a>
       <a href="#locations" class="btn-outline">Trouver un distributeur</a>
@@ -73,28 +84,28 @@
 
 <!-- HOW IT WORKS -->
 <section class="how">
-  <h2>Comment ça fonctionne</h2>
-  <p class="how-sub">De la boulangerie partenaire au distributeur automatique — une qualité à chaque étape.</p>
+  <h2>Seul le meilleur passe le test</h2>
+  <p class="how-sub">Nous sommes obsédés par la saveur. Voici comment nous vous apportons quelque chose de vraiment exceptionnel.</p>
   <div class="how-steps">
     <div class="how-step">
-      <div class="how-step-icon">🏭</div>
-      <h3>Boulangeries partenaires</h3>
-      <p>Des boulangeries certifiées produisent nos cupcakes selon nos spécifications exactes et nos critères de qualité.</p>
+      <div class="how-step-icon">🔍</div>
+      <h3>On part à la chasse aux pépites</h3>
+      <p>Nous sillonnons les meilleures boulangeries de la région — en goûtant, testant — jusqu'à trouver celles qui sortent vraiment du lot.</p>
     </div>
     <div class="how-step">
-      <div class="how-step-icon">📦</div>
-      <h3>Emballage Loui's</h3>
-      <p>Chaque cupcake est emballé individuellement avec notre marque, les informations allergènes et la date limite de consommation.</p>
+      <div class="how-step-icon">✨</div>
+      <h3>On sélectionne avec exigence</h3>
+      <p>Seules les recettes qui nous font craquer intègrent notre carte. Zéro compromis sur le goût.</p>
     </div>
     <div class="how-step">
-      <div class="how-step-icon">🤖</div>
-      <h3>Distributeurs automatiques</h3>
-      <p>Nos distributeurs sont approvisionnés régulièrement et installés dans des lieux stratégiques de la région.</p>
+      <div class="how-step-icon">📍</div>
+      <h3>On vous les apporte</h3>
+      <p>Des cupcakes frais, disponibles partout dans la région — pour que le meilleur soit toujours à portée de main.</p>
     </div>
     <div class="how-step">
       <div class="how-step-icon">🧁</div>
-      <h3>Votre plaisir</h3>
-      <p>Choisissez votre parfum, payez, savourez. Un cupcake de qualité quand et où vous le souhaitez.</p>
+      <h3>Vous n'avez plus qu'à savourer</h3>
+      <p>Choisissez votre parfum et régalez-vous. Qualité boulangerie, 24h/24, sans faire la queue.</p>
     </div>
   </div>
 </section>
@@ -102,60 +113,95 @@
 <!-- PRODUCTS -->
 <section class="products" id="products">
   <div class="section-eyebrow">Notre gamme</div>
-  <h2 class="section-title">Sélection de cupcakes</h2>
-  <p class="section-sub">Une gamme soigneusement choisie — disponible dans nos distributeurs. Des spécialités saisonnières changent tout au long de l'année.</p>
-  <div class="product-notice">
-    <span>🏪</span>
-    <span><strong>Disponible en distributeur uniquement.</strong> Tous les cupcakes sont produits par nos boulangeries partenaires et vendus exclusivement via les distributeurs Loui's Cupcakes.</span>
-  </div>
+  <h2 class="section-title">Des saveurs dont on tombe amoureux</h2>
+  <p class="section-sub">Sélectionnés dans les meilleures boulangeries de la région — chaque parfum a été choisi parce qu'il nous a arrêtés net à la première bouchée.</p>
+
+  <div class="products-range-label">Toujours disponibles</div>
   <div class="products-grid">
     <div class="product-card">
-      <span class="product-emoji">🍪</span>
-      <div class="product-name">Cupcake Oreo</div>
-      <div class="product-price">3,50 €</div>
-      <span class="product-tag tag-classic">Classique</span>
+      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&h=300&fit=crop&auto=format" alt="Cupcake Oreo" class="product-img" loading="lazy"/></div>
+      <div class="product-info">
+        <div class="product-name">Cupcake Oreo</div>
+        <div class="product-desc">Moelleux à la vanille surmonté d'un nuage de crème cookies & cream et d'un Oreo entier. Un incontournable dès la première bouchée.</div>
+        <div class="product-footer"><div class="product-price">3,50 €</div><span class="product-tag tag-classic">Toujours disponible</span></div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍫</span>
-      <div class="product-name">Brownie Chocolat</div>
-      <div class="product-price">3,80 €</div>
-      <span class="product-tag tag-special">Signature</span>
+      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=400&h=300&fit=crop&auto=format" alt="Cupcake Brownie Chocolat" class="product-img" loading="lazy"/></div>
+      <div class="product-info">
+        <div class="product-name">Cupcake Brownie Chocolat</div>
+        <div class="product-desc">Pâte dense et fondante façon brownie, gorgée de pépites de chocolat noir, couronnée d'un tourbillon de ganache. Pour les vrais amateurs de chocolat.</div>
+        <div class="product-footer"><div class="product-price">3,80 €</div><span class="product-tag tag-special">Signature</span></div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">❤️</span>
-      <div class="product-name">Red Velvet</div>
-      <div class="product-price">3,50 €</div>
-      <span class="product-tag tag-classic">Classique</span>
+      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&h=300&fit=crop&q=60&auto=format" alt="Cupcake Red Velvet" class="product-img" loading="lazy"/></div>
+      <div class="product-info">
+        <div class="product-name">Cupcake Red Velvet</div>
+        <div class="product-desc">Éponge rouge écarlate avec une touche de cacao, garnie d'une généreuse swirl de frosting au fromage frais. Classique, élégant, irrésistible.</div>
+        <div class="product-footer"><div class="product-price">3,50 €</div><span class="product-tag tag-classic">Toujours disponible</span></div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍓</span>
-      <div class="product-name">Fraise & Shortcake</div>
-      <div class="product-price">3,80 €</div>
-      <span class="product-tag tag-special">Signature</span>
+      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=400&h=300&fit=crop&auto=format" alt="Cupcake Carrot Cake" class="product-img" loading="lazy"/></div>
+      <div class="product-info">
+        <div class="product-name">Cupcake Carrot Cake</div>
+        <div class="product-desc">Chaleureusement épicé à la cannelle et à la noix de muscade, avec des carottes fraîchement râpées et un frosting au fromage frais. Du réconfort à chaque bouchée.</div>
+        <div class="product-footer"><div class="product-price">3,50 €</div><span class="product-tag tag-classic">Toujours disponible</span></div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍋</span>
-      <div class="product-name">Cupcake Citron</div>
-      <div class="product-price">3,50 €</div>
-      <span class="product-tag tag-classic">Classique</span>
+      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1558303485-4e25024a9f71?w=400&h=300&fit=crop&auto=format" alt="Cupcake Myrtille & Fromage frais" class="product-img" loading="lazy"/></div>
+      <div class="product-info">
+        <div class="product-name">Cupcake Myrtille & Fromage frais</div>
+        <div class="product-desc">Débordant de myrtilles juteuses dans la pâte, surmonté d'une swirl de fromage frais acidulé et de myrtilles fraîches. Doux rencontre piquant, à la perfection.</div>
+        <div class="product-footer"><div class="product-price">3,50 €</div><span class="product-tag tag-classic">Toujours disponible</span></div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🫐</span>
-      <div class="product-name">Myrtille & Fromage frais</div>
-      <div class="product-price">3,50 €</div>
-      <span class="product-tag tag-classic">Classique</span>
+      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=400&h=300&fit=crop&auto=format" alt="Cupcake Banane & Chocolat" class="product-img" loading="lazy"/></div>
+      <div class="product-info">
+        <div class="product-name">Cupcake Banane & Chocolat</div>
+        <div class="product-desc">Moelleux à la banane marbré de chocolat noir, garni de crème au beurre chocolatée et d'une chips de banane caramélisée. Un mariage fait au paradis.</div>
+        <div class="product-footer"><div class="product-price">3,50 €</div><span class="product-tag tag-classic">Toujours disponible</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="products-range-label products-range-label--seasonal">Les quatre saisons 🍂🌸☀️❄️</div>
+  <p class="section-sub" style="text-align:center;margin-bottom:32px;">Nos cupcakes saisonniers changent avec l'année — toujours quelque chose à anticiper.</p>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1609079850770-dd9a8b6c1086?w=400&h=300&fit=crop&auto=format" alt="Cupcake Printanier aux Sprinkles" class="product-img" loading="lazy"/></div>
+      <div class="product-info">
+        <div class="product-name">Cupcake Printanier aux Sprinkles</div>
+        <div class="product-desc">Légère éponge vanillée avec une crème arc-en-ciel pastel et une pluie joyeuse de sprinkles. Lumineux, gai et irrésistible — tout comme le printemps.</div>
+        <div class="product-footer"><div class="product-price">3,80 €</div><span class="product-tag tag-seasonal">🌸 Printemps</span></div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍫</span>
-      <div class="product-name">Banane & Chocolat</div>
-      <div class="product-price">3,50 €</div>
-      <span class="product-tag tag-classic">Classique</span>
+      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop&auto=format" alt="Cupcake Fraise & Shortcake" class="product-img" loading="lazy"/></div>
+      <div class="product-info">
+        <div class="product-name">Cupcake Fraise & Shortcake</div>
+        <div class="product-desc">Éponge shortcake aérienne avec une compotée de fraises fraîches et une crème chantilly, couronnée d'une fraise entière. L'été dans la main.</div>
+        <div class="product-footer"><div class="product-price">3,80 €</div><span class="product-tag tag-seasonal">☀️ Été</span></div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍂</span>
-      <div class="product-name">Cupcake Potiron</div>
-      <div class="product-price">3,80 €</div>
-      <span class="product-tag tag-seasonal">Saisonnier</span>
+      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1570145820259-b5b80c5c8bd6?w=400&h=300&fit=crop&auto=format" alt="Cupcake Potiron" class="product-img" loading="lazy"/></div>
+      <div class="product-info">
+        <div class="product-name">Cupcake Potiron</div>
+        <div class="product-desc">Éponge au potiron épicée au gingembre et à la cannelle, avec un frosting au fromage frais à la cannelle. L'automne en une bouchée.</div>
+        <div class="product-footer"><div class="product-price">3,80 €</div><span class="product-tag tag-seasonal">🍂 Automne</span></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1612203985729-70726954388c?w=400&h=300&fit=crop&auto=format" alt="Cupcake Crumble Pomme" class="product-img" loading="lazy"/></div>
+      <div class="product-info">
+        <div class="product-name">Cupcake Crumble Pomme</div>
+        <div class="product-desc">Moelleux à la pomme et à la cannelle avec un crumble croustillant et un frosting vanille chaud. Comme un câlin par une froide journée d'hiver.</div>
+        <div class="product-footer"><div class="product-price">3,80 €</div><span class="product-tag tag-seasonal">❄️ Hiver</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -187,45 +233,27 @@
 
 <!-- ABOUT -->
 <section class="about" id="about">
+<!-- ABOUT -->
+<section class="about" id="about">
   <div class="about-inner">
     <div class="section-eyebrow">À propos</div>
-    <h2 class="section-title">Nous ne sommes pas une boulangerie. Nous sommes une marque de cupcakes.</h2>
-    <p class="section-sub">Loui's Cupcakes par Alston Ponde-Silcott est un concept de distribution moderne fondé sur une idée simple : des cupcakes de qualité disponibles à tout moment et en tout lieu.</p>
+    <h2 class="section-title">Une obsession : le cupcake parfait.</h2>
+    <p class="section-sub">Loui's Cupcakes est né d'une passion simple : vous apporter les meilleurs cupcakes de la région — où que vous soyez, à toute heure.</p>
     <div class="about-model">
       <div class="model-step">
-        <div class="model-step-num">Étape 01</div>
-        <h3>Les boulangeries partenaires produisent</h3>
-        <p>Nous travaillons avec des boulangeries certifiées qui produisent nos cupcakes selon nos recettes et standards de qualité.</p>
+        <div class="model-step-num">Notre mission</div>
+        <h3>Seul le meilleur mérite votre attention</h3>
+        <p>Nous goûtons et sélectionnons les boulangeries de la région pour ne retenir que les recettes qui méritent vraiment votre palais.</p>
       </div>
       <div class="model-step">
-        <div class="model-step-num">Étape 02</div>
-        <h3>Loui's emballe & marque</h3>
-        <p>Chaque cupcake est emballé dans nos boîtes Loui's Cupcakes avec les informations allergènes, les ingrédients et la date limite.</p>
+        <div class="model-step-num">Notre promesse</div>
+        <h3>Qualité boulangerie, toujours frais</h3>
+        <p>Chaque cupcake dans nos distributeurs respecte le même standard que dans la meilleure pâtisserie de la ville. Sans compromis.</p>
       </div>
       <div class="model-step">
-        <div class="model-step-num">Étape 03</div>
-        <h3>Vous nous trouvez en distributeur</h3>
-        <p>Nos distributeurs sont approvisionnés frais et installés dans des endroits pratiques — écoles, centres commerciaux, salles de sport.</p>
-      </div>
-    </div>
-    <div class="about-roadmap">
-      <h3>Notre feuille de route</h3>
-      <div class="roadmap-phases">
-        <div class="roadmap-phase phase-active">
-          <div class="phase-label">Maintenant — Phase 1</div>
-          <div class="phase-title">Modèle distributeur</div>
-          <div class="phase-desc">Boulangeries partenaires, marque Loui's, distributeurs</div>
-        </div>
-        <div class="roadmap-phase">
-          <div class="phase-label">Phase 2</div>
-          <div class="phase-title">Qualification</div>
-          <div class="phase-desc">Vers notre propre licence de production</div>
-        </div>
-        <div class="roadmap-phase">
-          <div class="phase-label">Phase 3</div>
-          <div class="phase-title">Production propre</div>
-          <div class="phase-desc">Intégration verticale — nos propres recettes</div>
-        </div>
+        <div class="model-step-num">Notre vision</div>
+        <h3>Le plaisir à portée de tous</h3>
+        <p>Nous installons nos distributeurs là où vous passez déjà — parce qu'un moment de bonheur ne devrait pas nécessiter de détour.</p>
       </div>
     </div>
   </div>
@@ -313,7 +341,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-logo">Loui's <span>Cupcakes</span></div>
-      <p class="footer-tagline">Un concept moderne de distribution de cupcakes. Région Saar-Moselle, Allemagne.</p>
+      <p class="footer-tagline">Les meilleurs cupcakes de la région, toujours à portée de main.</p>
     </div>
     <div>
       <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Navigation</div>
@@ -336,8 +364,7 @@
   </div>
   <div class="footer-bottom">
     <div class="footer-legal">
-      © 2026 Loui's Cupcakes par Alston Ponde-Silcott. Tous les cupcakes sont produits par des boulangeries partenaires certifiées.<br>
-      Distribution de pâtisseries et confiseries emballées via distributeurs automatiques.
+      © 2026 Loui's Cupcakes par Alston Ponde-Silcott. Tous droits réservés.
     </div>
     <div style="display:flex;gap:16px;">
       <a href="de.html#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Impressum</a>
