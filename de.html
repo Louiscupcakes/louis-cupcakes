@@ -196,6 +196,16 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
 .product-card.in-season{box-shadow:0 0 0 3px var(--raspberry),var(--shadow-md)}
 @media (prefers-reduced-motion:reduce){.season-particles{display:none}}
 
+/* ===== LEGAL ===== */
+.legal{background:var(--milk);padding:72px 6vw}
+.legal-inner{max-width:820px;margin:0 auto}
+.legal h2{font-size:30px;margin-bottom:24px}
+.legal h3{font-size:18px;margin:28px 0 10px}
+.legal p,.legal li{font-size:14.5px;color:var(--cocoa-soft);margin-bottom:10px}
+.legal ul{padding-left:22px;margin-bottom:10px}
+
+.legal + .legal{padding-top:0}
+
 </style>
 </head>
 <body>
@@ -473,9 +483,9 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
 <!-- CATERING -->
 <section class="catering" id="catering">
   <div class="catering-card">
-    <div class="catering-soon">Kommt später im Jahr 2026</div>
+    <div class="catering-soon">Kommt 2027</div>
     <h2>Catering & Events</h2>
-    <p>Geburtstage, Hochzeiten, Firmenevents, Schulfeiern — Cupcakes für jeden Anlass. Unser Catering-Service befindet sich derzeit in Entwicklung und startet noch in diesem Jahr. Registrieren Sie Ihr Interesse und wir melden uns, sobald es losgeht.</p>
+    <p>Geburtstage, Hochzeiten, Firmenevents, Schulfeiern — Cupcakes für jeden Anlass. Unser Catering-Service befindet sich derzeit in Entwicklung und startet 2027. Registrieren Sie Ihr Interesse und wir melden uns, sobald es losgeht.</p>
     <div class="catering-occasions">
       <span class="occasion-pill">🎂 Geburtstage</span>
       <span class="occasion-pill">💒 Hochzeiten</span>
@@ -532,7 +542,7 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
         <select id="reason" name="reason">
           <option value="">Bitte wählen</option>
           <option value="location">Ich möchte einen Automatenstandort anbieten</option>
-          <option value="catering">Catering-Anfrage (2026)</option>
+          <option value="catering">Catering-Anfrage (2027)</option>
           <option value="supplier">Lieferanten- / Partneranfrage</option>
           <option value="general">Allgemeine Frage</option>
         </select>
@@ -544,6 +554,57 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
       <button type="submit" class="btn-pink">Nachricht senden</button>
       <p id="form-success" style="display:none;color:var(--pink);font-size:13px;margin-top:8px;">Danke! Wir melden uns in Kürze.</p>
     </form>
+  </div>
+</section>
+
+
+
+<!-- IMPRESSUM -->
+<section class="legal" id="impressum">
+  <div class="legal-inner">
+    <h2>Impressum</h2>
+    <h3>Angaben gemäß § 5 TMG</h3>
+    <p>Loui's Cupcakes by Alston Ponde-Silcott<br>
+    Am Eisenstein 2<br>
+    66740 Saarlouis</p>
+    <p>E-Mail: <a href="mailto:info@louiscupcakes.com">info@louiscupcakes.com</a></p>
+    <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+    <p>Alston Ponde-Silcott</p>
+    <p><strong>Hinweis:</strong> Loui's Cupcakes vertreibt verpackte Back- und Süßwaren. Die Herstellung erfolgt durch ausgewählte Partnerbetriebe.</p>
+  </div>
+</section>
+
+<!-- DATENSCHUTZ -->
+<section class="legal" id="datenschutz">
+  <div class="legal-inner">
+    <h2>Datenschutzerklärung</h2>
+    <h3>Allgemeine Hinweise</h3>
+    <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Die Nutzung dieser Website erfolgt im Rahmen der geltenden Datenschutzvorschriften.</p>
+    <h3>Verantwortlicher</h3>
+    <p>Loui's Cupcakes by Alston Ponde-Silcott<br>
+    Am Eisenstein 2<br>
+    66740 Saarlouis<br>
+    Deutschland</p>
+    <p>E-Mail: <a href="mailto:info@louiscupcakes.com">info@louiscupcakes.com</a></p>
+    <h3>Hosting</h3>
+    <p>Diese Website wird über Netlify (Netlify, Inc., San Francisco, USA) betrieben. Dabei können technische Daten wie IP-Adresse, Browsertyp, Datum und Uhrzeit des Zugriffs sowie weitere technische Informationen automatisch verarbeitet werden.</p>
+    <h3>Google Fonts</h3>
+    <p>Diese Website nutzt Schriftarten von Google Fonts. Beim Aufruf der Seite lädt Ihr Browser die Schriften von Google-Servern, wobei Ihre IP-Adresse an Google übermittelt werden kann. Es gelten die Datenschutzbestimmungen von Google.</p>
+    <h3>Kontaktaufnahme</h3>
+    <p>Wenn Sie uns per E-Mail oder über ein Kontaktformular kontaktieren, werden Ihre Angaben zur Bearbeitung Ihrer Anfrage gespeichert.</p>
+    <h3>Cookies</h3>
+    <p>Diese Website kann technisch notwendige Cookies verwenden, um die Funktionalität und Benutzerfreundlichkeit der Seite sicherzustellen.</p>
+    <h3>Soziale Medien</h3>
+    <p>Auf dieser Website befinden sich Verlinkungen zu sozialen Netzwerken wie Instagram oder anderen Plattformen. Beim Anklicken dieser Links können Daten an die jeweiligen Anbieter übertragen werden. Es gelten die Datenschutzbestimmungen der jeweiligen Plattformen.</p>
+    <h3>Ihre Rechte</h3>
+    <p>Sie haben im Rahmen der gesetzlichen Vorschriften das Recht auf:</p>
+    <ul>
+      <li>Auskunft über Ihre gespeicherten Daten</li>
+      <li>Berichtigung unrichtiger Daten</li>
+      <li>Löschung Ihrer Daten</li>
+      <li>Einschränkung der Verarbeitung Ihrer Daten</li>
+    </ul>
+    <p>Bei Fragen zum Datenschutz können Sie uns jederzeit kontaktieren.</p>
   </div>
 </section>
 
@@ -574,12 +635,12 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-legal" id="impressum">
+    <div class="footer-legal">
       © 2026 Loui's Cupcakes von Alston Ponde-Silcott. Alle Rechte vorbehalten.
     </div>
     <div style="display:flex;gap:16px;">
       <a href="#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Impressum</a>
-      <a href="#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Datenschutz</a>
+      <a href="#datenschutz" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Datenschutz</a>
     </div>
   </div>
 </footer>
