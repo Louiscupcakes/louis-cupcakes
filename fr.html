@@ -555,7 +555,9 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
   // ===== Seasonal theme & particles =====
   (function(){
     const m = new Date().getMonth()+1;
-    const season = m>=3&&m<=5?'spring':m>=6&&m<=8?'summer':m>=9&&m<=11?'autumn':'winter';
+    let season = m>=3&&m<=5?'spring':m>=6&&m<=8?'summer':m>=9&&m<=11?'autumn':'winter';
+    const forced = new URLSearchParams(location.search).get('season');
+    if (['spring','summer','autumn','winter'].indexOf(forced) > -1) season = forced;
     document.body.classList.add('season-'+season);
     // Seasonal hero cupcake
     const heroImg = document.querySelector('.hero-photo');
