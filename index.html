@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loui's Cupcakes — A Taste of Happiness</title>
-  <meta name="description" content="Loui's Cupcakes is coming soon to the Saar-Mosel region — premium cupcakes from the finest local bakeries, brought to you through our upcoming vending machine network." />
+  <title>Loui's Cupcakes — Ein Geschmack voller Glück</title>
+  <meta name="description" content="Loui\'s Cupcakes kommt bald in die Saar-Mosel-Region — Premium-Cupcakes aus den besten lokalen Bäckereien, künftig über unser Verkaufsautomaten-Netz." />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Karla:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -197,6 +197,16 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
 .product-card.in-season{box-shadow:0 0 0 3px var(--raspberry),var(--shadow-md)}
 @media (prefers-reduced-motion:reduce){.season-particles{display:none}}
 
+/* ===== LEGAL ===== */
+.legal{background:var(--milk);padding:72px 6vw}
+.legal-inner{max-width:820px;margin:0 auto}
+.legal h2{font-size:30px;margin-bottom:24px}
+.legal h3{font-size:18px;margin:28px 0 10px}
+.legal p,.legal li{font-size:14.5px;color:var(--cocoa-soft);margin-bottom:10px}
+.legal ul{padding-left:22px;margin-bottom:10px}
+
+.legal + .legal{padding-top:0}
+
 </style>
 </head>
 <body>
@@ -205,19 +215,19 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
 <nav>
   <a class="nav-logo" href="index.html"><img src="logo.png" alt="Loui's Cupcakes" style="height:68px;width:auto;display:block;" /></a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#products">Our Range</a></li>
-    <li><a href="#locations">Locations</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="#products">Sortiment</a></li>
+    <li><a href="#locations">Standorte</a></li>
+    <li><a href="#about">Über uns</a></li>
     <li><a href="#catering">Catering</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact">Kontakt</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:16px;">
     <div class="nav-lang">
-      <a class="lang-btn active" href="index.html">EN</a>
-      <a class="lang-btn" href="de.html">DE</a>
+      <a class="lang-btn active" href="index.html">DE</a>
       <a class="lang-btn" href="fr.html">FR</a>
+      <a class="lang-btn" href="en.html">EN</a>
     </div>
-    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -226,61 +236,61 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-eyebrow">Coming soon to the Saar-Mosel region</div>
-    <h1>A taste of <em>happiness.</em></h1>
-    <p class="hero-sub">We're hunting down the finest bakeries in the region so you won't have to. The result, launching soon: irresistible cupcakes, ready whenever the craving hits.</p>
+    <div class="hero-eyebrow">Jetzt an Verkaufsautomaten in Ihrer Nähe</div>
+    <h1>Ein Geschmack voller <em>Glück.</em></h1>
+    <p class="hero-sub">Wir spüren gerade die besten Bäckereien der Region auf — damit Sie das nicht müssen. Das Ergebnis, bald erhältlich: unwiderstehliche Cupcakes, wann immer der Hunger kommt.</p>
     <div class="hero-ctas">
-      <a href="#products" class="btn-primary">See our flavours</a>
-      <a href="#locations" class="btn-outline">Get notified</a>
+      <a href="#products" class="btn-primary">Unser Sortiment</a>
+      <a href="#locations" class="btn-outline">Benachrichtigt werden</a>
     </div>
     </div>
   <div class="hero-visual">
     <div class="hero-photo-wrap">
-      <img src="strawberry.jpg" alt="Strawberry Shortcake cupcakes" class="hero-photo" data-season-alts='{"spring": "Spring Sprinkle cupcake", "summer": "Strawberry Shortcake cupcakes", "autumn": "Pumpkin cupcake", "winter": "Apple Crumble cupcake"}'/>
-      <span class="hero-chip hero-chip--1">Coming soon</span>
-      <span class="hero-chip hero-chip--2">♥ Made with love</span>
+      <img src="strawberry.jpg" alt="Erdbeer-Shortcake Cupcakes" class="hero-photo" data-season-alts='{"spring": "Frühlingsstreusel Cupcake", "summer": "Erdbeer-Shortcake Cupcakes", "autumn": "Kürbis Cupcake", "winter": "Apfelcrumble Cupcake"}'/>
+      <span class="hero-chip hero-chip--1">Bald verfügbar</span>
+      <span class="hero-chip hero-chip--2">♥ Mit Liebe gemacht</span>
     </div>
   </div>
 </section>
 <!-- MARQUEE -->
-<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Oreo<b>♥</b></span><span>Chocolate Brownie<b>♥</b></span><span>Red Velvet<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Blueberry Cream Cheese<b>♥</b></span><span>Chocolate Banana<b>♥</b></span><span>Coming soon<b>♥</b></span><span>Made with love<b>♥</b></span><span>Oreo<b>♥</b></span><span>Chocolate Brownie<b>♥</b></span><span>Red Velvet<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Blueberry Cream Cheese<b>♥</b></span><span>Chocolate Banana<b>♥</b></span><span>Coming soon<b>♥</b></span><span>Made with love<b>♥</b></span></div></div>
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Oreo<b>♥</b></span><span>Chocolate Brownie<b>♥</b></span><span>Red Velvet<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Blaubeere & Frischkäse<b>♥</b></span><span>Bananen-Schokolade<b>♥</b></span><span>Bald verfügbar<b>♥</b></span><span>Mit Liebe gemacht<b>♥</b></span><span>Oreo<b>♥</b></span><span>Chocolate Brownie<b>♥</b></span><span>Red Velvet<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Blaubeere & Frischkäse<b>♥</b></span><span>Bananen-Schokolade<b>♥</b></span><span>Bald verfügbar<b>♥</b></span><span>Mit Liebe gemacht<b>♥</b></span></div></div>
 
 
 <!-- HOW IT WORKS -->
 <section class="how">
-  <h2>Only the best make the cut</h2>
-  <p class="how-sub">We're obsessive about flavour. Here's how we'll bring you something truly special.</p>
+  <h2>Nur das Beste kommt rein</h2>
+  <p class="how-sub">Wir sind besessen von Geschmack. So bringen wir Ihnen etwas wirklich Besonderes.</p>
   <div class="how-steps">
     <div class="how-step">
       <div class="how-step-icon">🔍</div>
-      <h3>We seek out the finest</h3>
-      <p>We're scouting the region's best bakeries, tasting and testing to find the ones that truly stand out.</p>
+      <h3>Wir suchen das Feinste</h3>
+      <p>Wir kosten und testen uns durch die besten Bäckereien der Region — bis wir die wirklich außergewöhnlichen gefunden haben.</p>
     </div>
     <div class="how-step">
       <div class="how-step-icon">✨</div>
-      <h3>We curate the selection</h3>
-      <p>Only the recipes that make our mouths water will make it onto the menu. No compromises.</p>
+      <h3>Wir kuratieren die Auswahl</h3>
+      <p>Nur Rezepte, die uns selbst begeistern, kommen auf die Karte. Keine Kompromisse.</p>
     </div>
     <div class="how-step">
       <div class="how-step-icon">📍</div>
-      <h3>We bring them to you</h3>
-      <p>Fresh cupcakes will be stocked at locations across the region — so the best is always within reach.</p>
+      <h3>Wir bringen sie zu Ihnen</h3>
+      <p>Frische Cupcakes an Standorten in der ganzen Region — das Beste immer in Ihrer Nähe.</p>
     </div>
     <div class="how-step">
       <div class="how-step-icon">🧁</div>
-      <h3>You just enjoy</h3>
-      <p>Soon you'll just pick your flavour and indulge. Bakery quality, no queue.</p>
+      <h3>Sie genießen einfach</h3>
+      <p>Geschmack wählen und genießen. Bald: Bäckerei-Qualität, ohne Anstehen.</p>
     </div>
   </div>
 </section>
 
 <!-- PRODUCTS -->
 <section class="products" id="products">
-  <div class="section-eyebrow">Our range</div>
-  <h2 class="section-title">Flavours to fall for</h2>
-  <p class="section-sub">A first look at the flavours we're curating — each chosen from the finest bakeries in the region because it made us stop mid-bite. Full menu and prices coming at launch.</p>
+  <div class="section-eyebrow">Unser Sortiment</div>
+  <h2 class="section-title">Geschmacksrichtungen zum Verlieben</h2>
+  <p class="section-sub">Ein erster Blick auf die Sorten, die wir gerade kuratieren — jede ausgewählt aus den besten Bäckereien der Region. Vollständige Karte und Preise zum Launch.</p>
 
-  <div class="products-range-label">Always available</div>
+  <div class="products-range-label">Immer verfügbar</div>
   <div class="products-grid">
     <div class="product-card">
       <div class="product-img-wrap">
@@ -288,10 +298,10 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
       </div>
       <div class="product-info">
         <div class="product-name">Oreo Cupcake</div>
-        <div class="product-desc">Light and fluffy vanilla cupcake base with plenty of chopped Oreo cookies and a creamy, dreamy chocolate-vanilla swirl frosting on top.</div>
+        <div class="product-desc">Lockerer, luftiger Vanille-Cupcake mit reichlich gehackten Oreo-Keksen und einem cremig-verträumten Schokoladen-Vanille-Swirl-Frosting obendrauf.</div>
         <div class="product-footer">
-          <div class="product-price product-price--soon">Coming soon</div>
-          <span class="product-tag tag-classic">Always available</span>
+          <div class="product-price product-price--soon">Bald verfügbar</div>
+          <span class="product-tag tag-classic">Immer verfügbar</span>
         </div>
       </div>
     </div>
@@ -301,9 +311,9 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
       </div>
       <div class="product-info">
         <div class="product-name">Chocolate Brownie Cupcake</div>
-        <div class="product-desc">Dense, fudgy brownie-style sponge loaded with dark chocolate chips, crowned with a rich chocolate ganache swirl. For the serious chocolate lover.</div>
+        <div class="product-desc">Dichter, fudgiger Brownie-Teig voller dunkler Schokoladenstücke, gekrönt von einer satten Schokoladenganache. Für den ernsthaften Schokoladenliebhaber.</div>
         <div class="product-footer">
-          <div class="product-price product-price--soon">Coming soon</div>
+          <div class="product-price product-price--soon">Bald verfügbar</div>
           <span class="product-tag tag-special">Signature</span>
         </div>
       </div>
@@ -314,10 +324,10 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
       </div>
       <div class="product-info">
         <div class="product-name">Red Velvet Cupcake</div>
-        <div class="product-desc">Stunning crimson sponge with a hint of cocoa, finished with a generous swirl of silky cream cheese frosting. Classic, elegant, irresistible.</div>
+        <div class="product-desc">Beeindruckender roter Teig mit einem Hauch Kakao, verfeinert mit einer großzügigen Swirl aus seidigem Frischkäse-Frosting. Klassisch, elegant, unwiderstehlich.</div>
         <div class="product-footer">
-          <div class="product-price product-price--soon">Coming soon</div>
-          <span class="product-tag tag-classic">Always available</span>
+          <div class="product-price product-price--soon">Bald verfügbar</div>
+          <span class="product-tag tag-classic">Immer verfügbar</span>
         </div>
       </div>
     </div>
@@ -327,92 +337,92 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
       </div>
       <div class="product-info">
         <div class="product-name">Carrot Cake Cupcake</div>
-        <div class="product-desc">Warmly spiced with cinnamon and nutmeg, packed with freshly grated carrot and topped with a dreamy cream cheese frosting. Comfort in every bite.</div>
+        <div class="product-desc">Warm gewürzt mit Zimt und Muskat, gefüllt mit frisch geriebenem Karotten und gekrönt von einem cremigen Frischkäse-Frosting. Geborgenheit in jedem Bissen.</div>
         <div class="product-footer">
-          <div class="product-price product-price--soon">Coming soon</div>
-          <span class="product-tag tag-classic">Always available</span>
+          <div class="product-price product-price--soon">Bald verfügbar</div>
+          <span class="product-tag tag-classic">Immer verfügbar</span>
         </div>
       </div>
     </div>
     <div class="product-card">
       <div class="product-img-wrap">
-        <img src="blueberry.jpg" alt="Blueberry Cream Cheese Cupcake" class="product-img" loading="lazy"/>
+        <img src="blueberry.jpg" alt="Blaubeere & Frischkäse Cupcake" class="product-img" loading="lazy"/>
       </div>
       <div class="product-info">
-        <div class="product-name">Blueberry Cream Cheese Cupcake</div>
-        <div class="product-desc">Bursting with juicy blueberries baked right into the sponge, topped with a tangy cream cheese swirl and fresh blueberries. Sweet meets sharp, perfectly.</div>
+        <div class="product-name">Blaubeere & Frischkäse Cupcake</div>
+        <div class="product-desc">Prall gefüllt mit saftigen Blaubeeren im Teig, getoppt mit einer würzigen Frischkäse-Swirl und frischen Beeren. Süß trifft herb — perfekt ausbalanciert.</div>
         <div class="product-footer">
-          <div class="product-price product-price--soon">Coming soon</div>
-          <span class="product-tag tag-classic">Always available</span>
+          <div class="product-price product-price--soon">Bald verfügbar</div>
+          <span class="product-tag tag-classic">Immer verfügbar</span>
         </div>
       </div>
     </div>
     <div class="product-card">
       <div class="product-img-wrap">
-        <img src="choc_banana.jpg" alt="Chocolate Banana Cupcake" class="product-img" loading="lazy"/>
+        <img src="choc_banana.jpg" alt="Bananen-Schokolade Cupcake" class="product-img" loading="lazy"/>
       </div>
       <div class="product-info">
-        <div class="product-name">Chocolate Banana Cupcake</div>
-        <div class="product-desc">Moist banana sponge swirled through with dark chocolate, topped with chocolate buttercream and a caramelised banana chip. A match made in heaven.</div>
+        <div class="product-name">Bananen-Schokolade Cupcake</div>
+        <div class="product-desc">Saftiger Bananenkuchen mit dunkler Schokolade, getoppt mit Schokoladen-Buttercreme und einem karamellisierten Bananenchip. Eine Kombination wie gemacht füreinander.</div>
         <div class="product-footer">
-          <div class="product-price product-price--soon">Coming soon</div>
-          <span class="product-tag tag-classic">Always available</span>
+          <div class="product-price product-price--soon">Bald verfügbar</div>
+          <span class="product-tag tag-classic">Immer verfügbar</span>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="products-range-label products-range-label--seasonal">The Four Seasons 🍂🌸☀️❄️</div>
-  <p class="section-sub" style="text-align:center;margin-bottom:32px;">Our seasonal cupcakes change with the year — always something to look forward to.</p>
+  <div class="products-range-label products-range-label--seasonal">Die vier Jahreszeiten 🍂🌸☀️❄️</div>
+  <p class="section-sub" style="text-align:center;margin-bottom:32px;">Unsere saisonalen Cupcakes wechseln mit dem Jahr — immer etwas, worauf man sich freuen kann.</p>
   <div class="products-grid">
     <div class="product-card">
       <div class="product-img-wrap">
-        <img src="spring_sprinkle.jpg" alt="Spring Sprinkle Cupcake" class="product-img" loading="lazy"/>
+        <img src="spring_sprinkle.jpg" alt="Frühlingsstreusel Cupcake" class="product-img" loading="lazy"/>
       </div>
       <div class="product-info">
-        <div class="product-name">Spring Sprinkle Cupcake</div>
-        <div class="product-desc">Moist, rich chocolate cupcake topped with coconut buttercream frosting, garnished with toasted coconut and Easter egg candies.</div>
+        <div class="product-name">Frühlingsstreusel Cupcake</div>
+        <div class="product-desc">Saftiger, reichhaltiger Schokoladen-Cupcake mit Kokos-Buttercreme, garniert mit gerösteten Kokosflocken und Ostereier-Bonbons.</div>
         <div class="product-footer">
-          <div class="product-price product-price--soon">Coming soon</div>
-          <span class="product-tag tag-seasonal">🌸 Spring</span>
+          <div class="product-price product-price--soon">Bald verfügbar</div>
+          <span class="product-tag tag-seasonal">🌸 Frühling</span>
         </div>
       </div>
     </div>
     <div class="product-card">
       <div class="product-img-wrap">
-        <img src="strawberry.jpg" alt="Strawberry Shortcake Cupcake" class="product-img" loading="lazy"/>
+        <img src="strawberry.jpg" alt="Erdbeer-Shortcake Cupcake" class="product-img" loading="lazy"/>
       </div>
       <div class="product-info">
-        <div class="product-name">Strawberry Shortcake Cupcake</div>
-        <div class="product-desc">Fluffy shortcake sponge layered with fresh strawberry compote and topped with whipped cream frosting and a whole strawberry. Summer in your hand.</div>
+        <div class="product-name">Erdbeer-Shortcake Cupcake</div>
+        <div class="product-desc">Luftiger Shortcake-Teig mit frischem Erdbeerkompott und Schlagsahne-Frosting, gekrönt von einer ganzen Erdbeere. Sommer in der Hand.</div>
         <div class="product-footer">
-          <div class="product-price product-price--soon">Coming soon</div>
-          <span class="product-tag tag-seasonal">☀️ Summer</span>
+          <div class="product-price product-price--soon">Bald verfügbar</div>
+          <span class="product-tag tag-seasonal">☀️ Sommer</span>
         </div>
       </div>
     </div>
     <div class="product-card">
       <div class="product-img-wrap">
-        <img src="pumpkin.jpg" alt="Pumpkin Cupcake" class="product-img" loading="lazy"/>
+        <img src="pumpkin.jpg" alt="Kürbis Cupcake" class="product-img" loading="lazy"/>
       </div>
       <div class="product-info">
-        <div class="product-name">Pumpkin Cupcake</div>
-        <div class="product-desc">Spiced pumpkin sponge with hints of ginger and cinnamon, finished with a cinnamon cream cheese frosting and a dusting of autumnal spice. Autumn in a bite.</div>
+        <div class="product-name">Kürbis Cupcake</div>
+        <div class="product-desc">Gewürzter Kürbiskuchen mit Ingwer und Zimt, verfeinert mit Zimt-Frischkäse-Frosting und einem Hauch Herbstgewürz. Herbst in einem Bissen.</div>
         <div class="product-footer">
-          <div class="product-price product-price--soon">Coming soon</div>
-          <span class="product-tag tag-seasonal">🍂 Autumn</span>
+          <div class="product-price product-price--soon">Bald verfügbar</div>
+          <span class="product-tag tag-seasonal">🍂 Herbst</span>
         </div>
       </div>
     </div>
     <div class="product-card">
       <div class="product-img-wrap">
-        <img src="apple_crumble.jpg" alt="Apple Crumble Cupcake" class="product-img" loading="lazy"/>
+        <img src="apple_crumble.jpg" alt="Apfelcrumble Cupcake" class="product-img" loading="lazy"/>
       </div>
       <div class="product-info">
-        <div class="product-name">Apple Crumble Cupcake</div>
-        <div class="product-desc">Soft apple and cinnamon sponge with a buttery crumble topping and warm vanilla frosting. Like a hug on a cold winter's day.</div>
+        <div class="product-name">Apfelcrumble Cupcake</div>
+        <div class="product-desc">Weicher Apfel-Zimt-Teig mit knusprigem Streuselbelag und warmem Vanille-Frosting. Wie eine Umarmung an einem kalten Wintertag.</div>
         <div class="product-footer">
-          <div class="product-price product-price--soon">Coming soon</div>
+          <div class="product-price product-price--soon">Bald verfügbar</div>
           <span class="product-tag tag-seasonal">❄️ Winter</span>
         </div>
       </div>
@@ -424,23 +434,23 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
 <section class="locations" id="locations">
   <div class="locations-inner">
     <div>
-      <div class="section-eyebrow">Find us</div>
-      <h2 class="section-title">Our vending machine locations</h2>
-      <p class="section-sub">We're rolling out our first machines across the Saar-Mosel region. Our goal is to bring Loui's Cupcakes to the places you already are.</p>
+      <div class="section-eyebrow">Finden Sie uns</div>
+      <h2 class="section-title">Unsere Automatenstandorte</h2>
+      <p class="section-sub">Wir rollen unsere ersten Automaten in der Saar-Mosel-Region aus. Unser Ziel: Loui's Cupcakes überall dort verfügbar zu machen, wo Sie ohnehin sind.</p>
       <div class="location-types">
-        <div class="location-type"><span>🛍️</span> Shopping centres</div>
-        <div class="location-type"><span>🚉</span> Transport hubs</div>
-        <div class="location-type"><span>🎓</span> Schools & universities</div>
-        <div class="location-type"><span>💼</span> Business parks</div>
-        <div class="location-type"><span>🏋️</span> Gyms & leisure</div>
-        <div class="location-type"><span>🏥</span> Healthcare facilities</div>
+        <div class="location-type"><span>🛍️</span> Einkaufszentren</div>
+        <div class="location-type"><span>🚉</span> Bahnhöfe & Haltestellen</div>
+        <div class="location-type"><span>🎓</span> Schulen & Hochschulen</div>
+        <div class="location-type"><span>💼</span> Gewerbegebiete</div>
+        <div class="location-type"><span>🏋️</span> Fitnessstudios</div>
+        <div class="location-type"><span>🏥</span> Gesundheitseinrichtungen</div>
       </div>
     </div>
     <div class="coming-soon-map">
       <div style="font-size:48px;margin-bottom:16px;">📍</div>
-      <h3>Locations coming soon</h3>
-      <p>Our first machines are on their way. Sign up to be notified when a Loui's Cupcakes machine opens near you.</p>
-      <a href="#contact" class="btn-primary">Get notified</a>
+      <h3>Standorte folgen in Kürze</h3>
+      <p>Unsere ersten Automaten sind in Planung. Tragen Sie sich ein und wir benachrichtigen Sie, sobald ein Automat in Ihrer Nähe steht.</p>
+      <a href="#contact" class="btn-primary">Benachrichtigt werden</a>
     </div>
   </div>
 </section>
@@ -448,24 +458,24 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-inner">
-    <div class="section-eyebrow">About us</div>
-    <h2 class="section-title">Obsessed with finding the perfect cupcake.</h2>
-    <p class="section-sub">Loui's Cupcakes is built on a simple obsession: bringing the very best cupcakes in the region to you — wherever you are, whenever you want them.</p>
+    <div class="section-eyebrow">Über uns</div>
+    <h2 class="section-title">Besessen vom perfekten Cupcake.</h2>
+    <p class="section-sub">Loui's Cupcakes wurde aus einer einfachen Leidenschaft geboren: die besten Cupcakes der Region zu Ihnen zu bringen — überall und jederzeit.</p>
     <div class="about-model">
       <div class="model-step">
-        <div class="model-step-num">Our mission</div>
-        <h3>Only the finest make the cut</h3>
-        <p>We've tasted our way through the region's bakeries so we can hand-pick only the recipes that are truly worth your time — and your taste buds.</p>
+        <div class="model-step-num">Unsere Mission</div>
+        <h3>Nur das Feinste kommt rein</h3>
+        <p>Wir verkosten uns durch die Bäckereien der Region, um nur die Rezepte herauszupicken, die wirklich Ihren Gaumen verzaubern.</p>
       </div>
       <div class="model-step">
-        <div class="model-step-num">Our promise</div>
-        <h3>Bakery quality, always fresh</h3>
-        <p>Every cupcake in our machines is held to the same standard as what you'd expect walking into the best patisserie in town. No shortcuts.</p>
+        <div class="model-step-num">Unser Versprechen</div>
+        <h3>Bäckerei-Qualität, immer frisch</h3>
+        <p>Jeder Cupcake in unseren Automaten hält denselben Standard wie in der besten Konditorei der Stadt. Keine Abstriche.</p>
       </div>
       <div class="model-step">
-        <div class="model-step-num">Our vision</div>
-        <h3>A treat within everyone's reach</h3>
-        <p>We're placing our machines at the spots you already pass through — because a moment of joy shouldn't require a detour.</p>
+        <div class="model-step-num">Unsere Vision</div>
+        <h3>Genuss für alle, überall</h3>
+        <p>Wir stellen unsere Automaten dort auf, wo Sie ohnehin vorbeikommen — weil ein Moment des Glücks keinen Umweg braucht.</p>
       </div>
     </div>
   </div>
@@ -474,28 +484,28 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
 <!-- CATERING -->
 <section class="catering" id="catering">
   <div class="catering-card">
-    <div class="catering-soon">Coming in 2027</div>
-    <h2>Catering & events</h2>
-    <p>Birthdays, weddings, corporate events, school celebrations — cupcakes for every occasion. Our catering service is currently in development and will launch in 2027. Register your interest and we'll be in touch when it's ready.</p>
+    <div class="catering-soon">Kommt 2027</div>
+    <h2>Catering & Events</h2>
+    <p>Geburtstage, Hochzeiten, Firmenevents, Schulfeiern — Cupcakes für jeden Anlass. Unser Catering-Service befindet sich derzeit in Entwicklung und startet 2027. Registrieren Sie Ihr Interesse und wir melden uns, sobald es losgeht.</p>
     <div class="catering-occasions">
-      <span class="occasion-pill">🎂 Birthdays</span>
-      <span class="occasion-pill">💒 Weddings</span>
-      <span class="occasion-pill">🏢 Corporate events</span>
-      <span class="occasion-pill">🎓 School events</span>
-      <span class="occasion-pill">🎉 Celebrations</span>
+      <span class="occasion-pill">🎂 Geburtstage</span>
+      <span class="occasion-pill">💒 Hochzeiten</span>
+      <span class="occasion-pill">🏢 Firmenevents</span>
+      <span class="occasion-pill">🎓 Schulveranstaltungen</span>
+      <span class="occasion-pill">🎉 Feiern</span>
     </div>
-    <a href="#contact" class="btn-primary">Register your interest</a>
+    <a href="#contact" class="btn-primary">Interesse anmelden</a>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="section-eyebrow" style="color:var(--pink);">Get in touch</div>
-  <h2>Let's talk</h2>
-  <p class="contact-sub">Want a machine at your location? Interested in a partnership? Just want to say hello? We'd love to hear from you.</p>
+  <div class="section-eyebrow" style="color:var(--pink);">Kontakt</div>
+  <h2>Sprechen Sie uns an</h2>
+  <p class="contact-sub">Möchten Sie einen Automaten an Ihrem Standort? Interesse an einer Partnerschaft? Oder einfach Hallo sagen? Wir freuen uns von Ihnen zu hören.</p>
   <div class="contact-grid">
     <div class="contact-info">
-      <h3>Contact details</h3>
+      <h3>Kontaktdaten</h3>
       <div class="contact-item">
         <span>📩</span>
         <a href="mailto:info@louiscupcakes.com">info@louiscupcakes.com</a>
@@ -506,7 +516,7 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
       </div>
       <div class="contact-item">
         <span>📍</span>
-        <span>Saar-Mosel region, Germany</span>
+        <span>Saar-Mosel-Region, Deutschland</span>
       </div>
       <div class="contact-item">
         <span>📸</span>
@@ -514,37 +524,88 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
       </div>
       <div style="margin-top:28px;padding:20px;background:rgba(255,245,236,0.06);border-radius:10px;border:1px solid rgba(255,245,236,0.12);">
         <p style="font-size:13px;color:rgba(255,245,236,0.6);line-height:1.6;">
-          <strong style="color:var(--pink);">Interested in hosting a machine?</strong><br>
-          We're actively looking for partner locations. Shopping centres, schools, gyms, offices — if you have footfall, we'd love to talk.
+          <strong style="color:var(--pink);">Interessiert an einem Automatenstandort?</strong><br>
+          Wir suchen aktiv nach Partnerstandorten. Einkaufszentren, Schulen, Fitnessstudios, Büros — wenn Sie Laufkundschaft haben, sprechen wir gerne mit Ihnen.
         </p>
       </div>
     </div>
     <form class="contact-form" onsubmit="handleSubmit(event)">
       <div class="form-group">
-        <label for="name">Your name</label>
-        <input type="text" id="name" name="name" placeholder="Alston Ponde-Silcott" required />
+        <label for="name">Ihr Name</label>
+        <input type="text" id="name" name="name" placeholder="Max Mustermann" required />
       </div>
       <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" id="email" name="email" placeholder="hello@example.com" required />
+        <label for="email">E-Mail-Adresse</label>
+        <input type="email" id="email" name="email" placeholder="hallo@beispiel.de" required />
       </div>
       <div class="form-group">
-        <label for="reason">Reason for contact</label>
+        <label for="reason">Grund der Anfrage</label>
         <select id="reason" name="reason">
-          <option value="">Select a reason</option>
-          <option value="location">I'd like to host a vending machine</option>
-          <option value="catering">Catering enquiry (2027)</option>
-          <option value="supplier">Supplier / partnership enquiry</option>
-          <option value="general">General question</option>
+          <option value="">Bitte wählen</option>
+          <option value="location">Ich möchte einen Automatenstandort anbieten</option>
+          <option value="catering">Catering-Anfrage (2027)</option>
+          <option value="supplier">Lieferanten- / Partneranfrage</option>
+          <option value="general">Allgemeine Frage</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Tell us a bit about your enquiry..."></textarea>
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message" rows="4" placeholder="Erzählen Sie uns mehr über Ihre Anfrage..."></textarea>
       </div>
-      <button type="submit" class="btn-pink">Send message</button>
-      <p id="form-success" style="display:none;color:var(--pink);font-size:13px;margin-top:8px;">Thanks! We'll be in touch soon.</p>
+      <button type="submit" class="btn-pink">Nachricht senden</button>
+      <p id="form-success" style="display:none;color:var(--pink);font-size:13px;margin-top:8px;">Danke! Wir melden uns in Kürze.</p>
     </form>
+  </div>
+</section>
+
+
+
+<!-- IMPRESSUM -->
+<section class="legal" id="impressum">
+  <div class="legal-inner">
+    <h2>Impressum</h2>
+    <h3>Angaben gemäß § 5 TMG</h3>
+    <p>Loui's Cupcakes by Alston Ponde-Silcott<br>
+    Am Eisenstein 2<br>
+    66740 Saarlouis</p>
+    <p>E-Mail: <a href="mailto:info@louiscupcakes.com">info@louiscupcakes.com</a></p>
+    <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+    <p>Alston Ponde-Silcott</p>
+    <p><strong>Hinweis:</strong> Loui's Cupcakes vertreibt verpackte Back- und Süßwaren. Die Herstellung erfolgt durch ausgewählte Partnerbetriebe.</p>
+  </div>
+</section>
+
+<!-- DATENSCHUTZ -->
+<section class="legal" id="datenschutz">
+  <div class="legal-inner">
+    <h2>Datenschutzerklärung</h2>
+    <h3>Allgemeine Hinweise</h3>
+    <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Die Nutzung dieser Website erfolgt im Rahmen der geltenden Datenschutzvorschriften.</p>
+    <h3>Verantwortlicher</h3>
+    <p>Loui's Cupcakes by Alston Ponde-Silcott<br>
+    Am Eisenstein 2<br>
+    66740 Saarlouis<br>
+    Deutschland</p>
+    <p>E-Mail: <a href="mailto:info@louiscupcakes.com">info@louiscupcakes.com</a></p>
+    <h3>Hosting</h3>
+    <p>Diese Website wird über Netlify (Netlify, Inc., San Francisco, USA) betrieben. Dabei können technische Daten wie IP-Adresse, Browsertyp, Datum und Uhrzeit des Zugriffs sowie weitere technische Informationen automatisch verarbeitet werden.</p>
+    <h3>Google Fonts</h3>
+    <p>Diese Website nutzt Schriftarten von Google Fonts. Beim Aufruf der Seite lädt Ihr Browser die Schriften von Google-Servern, wobei Ihre IP-Adresse an Google übermittelt werden kann. Es gelten die Datenschutzbestimmungen von Google.</p>
+    <h3>Kontaktaufnahme</h3>
+    <p>Wenn Sie uns per E-Mail oder über ein Kontaktformular kontaktieren, werden Ihre Angaben zur Bearbeitung Ihrer Anfrage gespeichert.</p>
+    <h3>Cookies</h3>
+    <p>Diese Website kann technisch notwendige Cookies verwenden, um die Funktionalität und Benutzerfreundlichkeit der Seite sicherzustellen.</p>
+    <h3>Soziale Medien</h3>
+    <p>Auf dieser Website befinden sich Verlinkungen zu sozialen Netzwerken wie Instagram oder anderen Plattformen. Beim Anklicken dieser Links können Daten an die jeweiligen Anbieter übertragen werden. Es gelten die Datenschutzbestimmungen der jeweiligen Plattformen.</p>
+    <h3>Ihre Rechte</h3>
+    <p>Sie haben im Rahmen der gesetzlichen Vorschriften das Recht auf:</p>
+    <ul>
+      <li>Auskunft über Ihre gespeicherten Daten</li>
+      <li>Berichtigung unrichtiger Daten</li>
+      <li>Löschung Ihrer Daten</li>
+      <li>Einschränkung der Verarbeitung Ihrer Daten</li>
+    </ul>
+    <p>Bei Fragen zum Datenschutz können Sie uns jederzeit kontaktieren.</p>
   </div>
 </section>
 
@@ -553,34 +614,34 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
   <div class="footer-inner">
     <div>
       <div class="footer-logo">Loui's <span>Cupcakes</span></div>
-      <p class="footer-tagline">The finest cupcakes in the region, always within reach.</p>
+      <p class="footer-tagline">Die besten Cupcakes der Region — immer in Ihrer Nähe.</p>
     </div>
     <div>
-      <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Navigate</div>
+      <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Navigation</div>
       <div class="footer-links">
-        <a href="#products">Our range</a>
-        <a href="#locations">Locations</a>
-        <a href="#about">About us</a>
+        <a href="#products">Sortiment</a>
+        <a href="#locations">Standorte</a>
+        <a href="#about">Über uns</a>
         <a href="#catering">Catering</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Kontakt</a>
       </div>
     </div>
     <div>
-      <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Languages</div>
+      <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Sprachen</div>
       <div class="footer-links">
-        <a href="index.html">English</a>
-        <a href="de.html">Deutsch</a>
+        <a href="index.html">Deutsch</a>
         <a href="fr.html">Français</a>
+        <a href="en.html">English</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-legal">
-      © 2026 Loui's Cupcakes by Alston Ponde-Silcott. All rights reserved.
+      © 2026 Loui's Cupcakes von Alston Ponde-Silcott. Alle Rechte vorbehalten.
     </div>
     <div style="display:flex;gap:16px;">
-      <a href="de.html#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Impressum</a>
-      <a href="de.html#datenschutz" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Datenschutz</a>
+      <a href="#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Impressum</a>
+      <a href="#datenschutz" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Datenschutz</a>
     </div>
   </div>
 </footer>
@@ -590,7 +651,6 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
   const navLinks = document.getElementById('navLinks');
   hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
   function handleSubmit(e) {
     e.preventDefault();
     document.getElementById('form-success').style.display = 'block';
