@@ -4,14 +4,221 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loui's Cupcakes — A Taste of Happiness</title>
-  <meta name="description" content="Premium cupcakes available 24/7 through our vending machine network. Sourced from trusted partner bakeries, branded and distributed by Loui's Cupcakes." />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Loui's Cupcakes is coming soon to the Saar-Mosel region — premium cupcakes from the finest local bakeries, brought to you through our upcoming vending machine network." />
+  <style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400 700;font-display:swap;src:url('fonts/fraunces-v38-latin-regular.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:400 700;font-display:swap;src:url('fonts/fraunces-v38-latin-italic.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/fraunces-v38-latin-700.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:700;font-display:swap;src:url('fonts/fraunces-v38-latin-700italic.woff2') format('woff2');}
+@font-face{font-family:'Karla';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/karla-v33-latin-regular.woff2') format('woff2');}
+@font-face{font-family:'Karla';font-style:italic;font-weight:400;font-display:swap;src:url('fonts/karla-v33-latin-italic.woff2') format('woff2');}
+@font-face{font-family:'Karla';font-style:normal;font-weight:700 800;font-display:swap;src:url('fonts/karla-v33-latin-700.woff2') format('woff2');}
+@font-face{font-family:'Karla';font-style:italic;font-weight:700 800;font-display:swap;src:url('fonts/karla-v33-latin-700italic.woff2') format('woff2');}
+</style>
+<style>
+:root{
+  --cream:#FFF7F0; --cocoa:#43251A; --cocoa-soft:#6B4632;
+  --raspberry:#D6336C; --raspberry-deep:#B02355; --blush:#FBE3EA;
+  --caramel:#C9913D; --milk:#FFFFFF; --pink:#D6336C;
+  --shadow-sm:0 2px 10px rgba(67,37,26,.07);
+  --shadow-md:0 12px 32px rgba(67,37,26,.12);
+  --radius:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',sans-serif;background:var(--cream);color:var(--cocoa);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.footer-logo{font-family:'Fraunces',serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+img{max-width:100%}
+a{color:inherit}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 5vw;background:rgba(255,247,240,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(67,37,26,.07)}
+.nav-logo img{height:68px!important}
+.nav-links{display:flex;list-style:none;gap:6px}
+.nav-links a{text-decoration:none;font-weight:700;font-size:14.5px;color:var(--cocoa-soft);padding:8px 14px;border-radius:999px;transition:.25s}
+.nav-links a:hover{background:var(--blush);color:var(--raspberry)}
+.nav-lang{display:flex;gap:4px;background:var(--milk);border:1px solid rgba(67,37,26,.1);border-radius:999px;padding:3px}
+.lang-btn{text-decoration:none;font-size:12.5px;font-weight:800;padding:5px 11px;border-radius:999px;color:var(--cocoa-soft);transition:.2s}
+.lang-btn.active,.lang-btn:hover{background:var(--raspberry);color:#fff}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+.nav-hamburger span{width:24px;height:2.5px;background:var(--cocoa);border-radius:2px}
+
+/* ===== HERO ===== */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:4vw;padding:64px 6vw 88px;max-width:1240px;margin:0 auto;position:relative;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:var(--blush);z-index:-1;opacity:.55}
+.hero::before{width:380px;height:380px;top:-140px;right:-100px}
+.hero::after{width:220px;height:220px;bottom:-90px;left:-70px}
+.hero-eyebrow{display:inline-block;background:var(--milk);border:1.5px dashed var(--raspberry);color:var(--raspberry);font-weight:800;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(42px,5.6vw,72px);font-weight:640;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--raspberry);font-weight:560}
+.hero-sub{font-size:18px;color:var(--cocoa-soft);max-width:46ch;margin-bottom:30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary,.btn-pink{display:inline-block;background:var(--raspberry);color:#fff;text-decoration:none;font-weight:800;font-size:15px;padding:15px 30px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 8px 22px rgba(214,51,108,.32);transition:.25s}
+.btn-primary:hover,.btn-pink:hover{background:var(--raspberry-deep);transform:translateY(-2px)}
+.btn-outline{display:inline-block;border:2px solid var(--cocoa);color:var(--cocoa);text-decoration:none;font-weight:800;font-size:15px;padding:13px 28px;border-radius:999px;transition:.25s}
+.btn-outline:hover{background:var(--cocoa);color:var(--cream);transform:translateY(-2px)}
+.hero-visual{display:flex;justify-content:center}
+.hero-photo-wrap{position:relative;width:min(400px,82vw)}
+.hero-photo{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:12px solid var(--milk);box-shadow:var(--shadow-md);transform:rotate(2deg)}
+.hero-photo-wrap::before{content:"";position:absolute;inset:-22px;border:2px dashed var(--caramel);border-radius:50%;opacity:.6}
+.hero-chip{position:absolute;background:var(--milk);font-weight:800;font-size:14px;padding:10px 18px;border-radius:999px;box-shadow:var(--shadow-md);white-space:nowrap}
+.hero-chip--1{top:6%;right:-4%;color:var(--raspberry);animation:float 5s ease-in-out infinite}
+.hero-chip--2{bottom:8%;left:-6%;color:var(--caramel);animation:float 6s ease-in-out 1s infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* ===== MARQUEE ===== */
+.marquee{background:var(--cocoa);color:var(--cream);overflow:hidden;padding:14px 0;transform:rotate(-1deg) scale(1.02);margin:0 -8px}
+.marquee-track{display:flex;gap:0;width:max-content;animation:scroll 36s linear infinite}
+.marquee span{font-family:'Fraunces',serif;font-style:italic;font-size:17px;white-space:nowrap;padding:0 14px}
+.marquee b{color:var(--caramel);font-weight:400;padding:0 4px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ===== SECTIONS ===== */
+section{padding:84px 6vw}
+.section-eyebrow{text-align:center;font-size:13px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--caramel);margin-bottom:12px}
+.section-title{text-align:center;font-size:clamp(30px,3.6vw,46px);margin-bottom:16px}
+.section-sub{text-align:center;font-size:17px;color:var(--cocoa-soft);max-width:62ch;margin:0 auto 30px}
+
+/* ===== HOW ===== */
+.how{background:var(--milk);position:relative;padding-top:96px}
+.how::before{content:"";position:absolute;top:-1px;left:0;right:0;height:30px;background-image:radial-gradient(circle at 30px -10px,var(--cream) 26px,transparent 27px);background-size:60px 30px;background-repeat:repeat-x}
+.how h2{text-align:center;font-size:clamp(30px,3.6vw,46px);margin-bottom:14px}
+.how-sub{text-align:center;color:var(--cocoa-soft);font-size:17px;margin-bottom:48px}
+.how-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1140px;margin:0 auto}
+.how-step{background:var(--cream);border-radius:var(--radius);padding:32px 26px;text-align:center;transition:.3s;border:1px solid rgba(67,37,26,.05)}
+.how-step:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.how-step-icon{width:62px;height:62px;display:flex;align-items:center;justify-content:center;font-size:26px;background:var(--blush);border-radius:50%;margin:0 auto 18px}
+.how-step h3{font-size:19px;margin-bottom:10px}
+.how-step p{font-size:14.5px;color:var(--cocoa-soft)}
+
+/* ===== PRODUCTS ===== */
+.products{max-width:1240px;margin:0 auto}
+.products-range-label{text-align:center;font-family:'Fraunces',serif;font-style:italic;font-size:24px;color:var(--raspberry);margin:54px 0 26px}
+.products-range-label--seasonal{margin-top:72px}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:24px;max-width:1140px;margin:0 auto}
+.product-card{display:flex;flex-direction:column;background:var(--milk);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:.3s;border:1px solid rgba(67,37,26,.05)}
+.product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.product-img-wrap{width:100%;height:230px;overflow:hidden}
+.product-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.product-card:hover .product-img{transform:scale(1.06)}
+.product-info{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.product-name{font-family:'Fraunces',serif;font-size:20px;font-weight:600}
+.product-desc{font-size:14px;line-height:1.65;color:var(--cocoa-soft);flex:1}
+.product-footer{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+.product-price{font-family:'Fraunces',serif;font-size:21px;font-weight:600;color:var(--raspberry)}
+.product-tag{font-size:11.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.tag-classic{background:var(--blush);color:var(--raspberry)}
+.tag-special{background:#F6E7CF;color:var(--caramel)}
+.tag-seasonal{background:#EDF3E4;color:#5E7C3A}
+
+/* ===== LOCATIONS ===== */
+.locations{background:var(--milk);position:relative;padding-top:96px}
+.locations::before{content:"";position:absolute;top:-1px;left:0;right:0;height:30px;background-image:radial-gradient(circle at 30px -10px,var(--cream) 26px,transparent 27px);background-size:60px 30px;background-repeat:repeat-x}
+.locations-inner{max-width:1140px;margin:0 auto}
+.location-types{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:40px 0}
+.location-type{background:var(--cream);border-radius:16px;padding:20px 14px;text-align:center;font-weight:700;font-size:14.5px;border:1px solid rgba(67,37,26,.05);transition:.25s}
+.location-type:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.coming-soon-map{background:var(--blush);border:2px dashed var(--raspberry);border-radius:var(--radius);padding:44px 30px;text-align:center;max-width:620px;margin:0 auto}
+.coming-soon-map h3{font-size:24px;margin:10px 0 8px}
+.coming-soon-map p{color:var(--cocoa-soft);margin-bottom:22px}
+
+/* ===== ABOUT ===== */
+.about-inner{max-width:1140px;margin:0 auto}
+.about-model{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:46px}
+.model-step{background:var(--milk);border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow-sm);border-top:5px solid var(--raspberry)}
+.model-step:nth-child(2){border-top-color:var(--caramel)}
+.model-step:nth-child(3){border-top-color:#8FAE5D}
+.model-step-num{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--caramel);margin-bottom:12px}
+.model-step h3{font-size:20px;margin-bottom:10px}
+.model-step p{font-size:14.5px;color:var(--cocoa-soft)}
+
+/* ===== CATERING ===== */
+.catering{background:var(--cocoa);color:var(--cream);position:relative}
+.catering .section-eyebrow{color:var(--caramel)}
+.catering .section-title{color:var(--cream)}
+.catering .section-sub{color:rgba(255,247,240,.75)}
+.catering-card{max-width:760px;margin:0 auto;text-align:center}
+.catering-occasions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:28px 0 32px}
+.occasion-pill{background:rgba(255,247,240,.1);border:1px solid rgba(255,247,240,.25);padding:9px 18px;border-radius:999px;font-size:14px;font-weight:700}
+.catering .btn-pink{box-shadow:0 8px 22px rgba(214,51,108,.45)}
+
+/* ===== CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;max-width:1080px;margin:40px auto 0}
+.contact-info h3{font-size:21px;margin-bottom:18px}
+.contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;font-size:15.5px}
+.contact-item a{color:var(--raspberry);font-weight:700;text-decoration:none}
+.contact-sub{background:var(--blush);border-radius:16px;padding:20px;font-size:14.5px;margin-top:22px}
+.contact-form{background:var(--milk);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow-sm)}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:13px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--cocoa-soft);margin-bottom:7px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:13px 16px;border:1.5px solid rgba(67,37,26,.14);border-radius:12px;font-family:'Karla',sans-serif;font-size:15px;background:var(--cream);color:var(--cocoa);transition:.2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--raspberry);background:#fff;box-shadow:0 0 0 4px rgba(214,51,108,.1)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--cocoa);color:var(--cream);padding:64px 6vw 28px}
+.footer-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;max-width:1140px;margin:0 auto 44px}
+.footer-logo{font-size:26px}
+.footer-logo span{color:var(--raspberry);font-style:italic}
+.footer-tagline{color:rgba(255,247,240,.6);font-size:14.5px;margin-top:10px;max-width:30ch}
+.footer-links{display:flex;flex-direction:column;gap:9px}
+.footer-links a{color:rgba(255,247,240,.75);text-decoration:none;font-size:14.5px;transition:.2s}
+.footer-links a:hover{color:var(--caramel)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;max-width:1140px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,247,240,.12)}
+.footer-legal{color:rgba(255,247,240,.45);font-size:12.5px}
+
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .marquee-track,.hero-chip--1,.hero-chip--2{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:920px){
+  .hero{grid-template-columns:1fr;text-align:center;gap:48px;padding-top:44px}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .hero-ctas{justify-content:center}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr;gap:28px}
+}
+@media (max-width:860px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:18px 5vw 24px;border-bottom:1px solid rgba(67,37,26,.08);box-shadow:var(--shadow-md)}
+  .nav-links.open{display:flex}
+  .nav-hamburger{display:flex}
+}
+
+.product-price--soon{font-size:14px;font-style:italic;font-weight:600}
+/* ===== SEASONAL THEMES ===== */
+body.season-spring{--raspberry:#D95FA0;--raspberry-deep:#B8407F;--caramel:#7FA15A;--blush:#FCE7F1}
+body.season-summer{--raspberry:#E2475C;--raspberry-deep:#C22F44;--caramel:#E8A93D;--blush:#FFE9E0}
+body.season-autumn{--raspberry:#C2562B;--raspberry-deep:#9E4220;--caramel:#B7791F;--blush:#F9E4D4}
+body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913D;--blush:#EAF1F7}
+.season-particles{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:4}
+.season-particle{position:absolute;top:0;will-change:transform;animation:season-fall linear infinite;opacity:.8}
+.season-particle.glyph{line-height:1}
+.season-particle.confetti{border-radius:2px}
+@keyframes season-fall{
+  0%{transform:translate3d(0,-8vh,0) rotate(0deg)}
+  100%{transform:translate3d(var(--sway,0px),108vh,0) rotate(var(--spin,360deg))}
+}
+.product-card.in-season{box-shadow:0 0 0 3px var(--raspberry),var(--shadow-md)}
+@media (prefers-reduced-motion:reduce){.season-particles{display:none}}
+
+</style>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+  <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="Loui's Cupcakes"></a>
+  <a class="nav-logo" href="index.html"><img src="logo.png" alt="Loui's Cupcakes" style="height:68px;width:auto;display:block;" /></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#products">Our Range</a></li>
     <li><a href="#locations">Locations</a></li>
@@ -21,9 +228,9 @@
   </ul>
   <div style="display:flex;align-items:center;gap:16px;">
     <div class="nav-lang">
-      <a class="lang-btn active" href="index.html">EN</a>
-      <a class="lang-btn" href="de.html">DE</a>
+      <a class="lang-btn" href="index.html">DE</a>
       <a class="lang-btn" href="fr.html">FR</a>
+      <a class="lang-btn active" href="en.html">EN</a>
     </div>
     <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -34,71 +241,50 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-eyebrow">Available at vending machines near you</div>
+    <div class="hero-eyebrow">Coming soon to the Saar-Mosel region</div>
     <h1>A taste of <em>happiness.</em></h1>
-    <p class="hero-sub">Premium cupcakes, sourced from trusted partner bakeries, packaged under our brand and brought directly to you — 24/7, wherever you are.</p>
+    <p class="hero-sub">We're hunting down the finest bakeries in the region so you won't have to. The result, launching soon: irresistible cupcakes, ready whenever the craving hits.</p>
     <div class="hero-ctas">
-      <a href="#products" class="btn-primary">See our range</a>
-      <a href="#locations" class="btn-outline">Find a machine</a>
+      <a href="#products" class="btn-primary">See our flavours</a>
+      <a href="#locations" class="btn-outline">Get notified</a>
     </div>
-    <div class="hero-badges">
-      <span class="hero-badge">🧁 Oreo</span>
-      <span class="hero-badge">🍫 Chocolate Brownie</span>
-      <span class="hero-badge">🍓 Strawberry</span>
-      <span class="hero-badge">+ more</span>
     </div>
-  </div>
-  <div class="hero-visual" aria-hidden="true">
-    <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="160" cy="160" r="140" fill="#F7A8B8" opacity="0.18"/>
-      <circle cx="160" cy="160" r="100" fill="#F7A8B8" opacity="0.18"/>
-      <!-- cupcake body -->
-      <rect x="100" y="185" width="120" height="70" rx="18" fill="#F7A8B8"/>
-      <!-- wrapper lines -->
-      <line x1="130" y1="185" x2="125" y2="255" stroke="#e8889c" stroke-width="2" opacity="0.5"/>
-      <line x1="160" y1="185" x2="160" y2="255" stroke="#e8889c" stroke-width="2" opacity="0.5"/>
-      <line x1="190" y1="185" x2="195" y2="255" stroke="#e8889c" stroke-width="2" opacity="0.5"/>
-      <!-- frosting -->
-      <ellipse cx="160" cy="170" rx="64" ry="38" fill="#FFF5EC"/>
-      <ellipse cx="138" cy="158" rx="22" ry="26" fill="#FFF5EC"/>
-      <ellipse cx="160" cy="148" rx="26" ry="30" fill="#FFF5EC"/>
-      <ellipse cx="182" cy="158" rx="22" ry="26" fill="#FFF5EC"/>
-      <!-- top swirl -->
-      <ellipse cx="160" cy="118" rx="18" ry="22" fill="#FFF5EC"/>
-      <circle cx="160" cy="98" r="8" fill="#6B3E2E"/>
-      <!-- sprinkles -->
-      <rect x="135" y="150" width="8" height="3" rx="1.5" fill="#F7A8B8" transform="rotate(-20 135 150)"/>
-      <rect x="170" y="142" width="8" height="3" rx="1.5" fill="#6B3E2E" transform="rotate(15 170 142)"/>
-      <rect x="150" y="135" width="8" height="3" rx="1.5" fill="#F7A8B8" transform="rotate(-35 150 135)"/>
-      <rect x="178" y="155" width="6" height="3" rx="1.5" fill="#6B3E2E" transform="rotate(25 178 155)"/>
-    </svg>
+  <div class="hero-visual">
+    <div class="hero-photo-wrap">
+      <img src="strawberry.jpg" alt="Strawberry Shortcake cupcakes" class="hero-photo" data-season-alts='{"spring": "Spring Sprinkle cupcake", "summer": "Strawberry Shortcake cupcakes", "autumn": "Pumpkin cupcake", "winter": "Apple Crumble cupcake"}'/>
+      <span class="hero-chip hero-chip--1">Coming soon</span>
+      <span class="hero-chip hero-chip--2">♥ Made with love</span>
+    </div>
   </div>
 </section>
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Oreo<b>♥</b></span><span>Chocolate Brownie<b>♥</b></span><span>Red Velvet<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Blueberry Cream Cheese<b>♥</b></span><span>Chocolate Banana<b>♥</b></span><span>Coming soon<b>♥</b></span><span>Made with love<b>♥</b></span><span>Oreo<b>♥</b></span><span>Chocolate Brownie<b>♥</b></span><span>Red Velvet<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Blueberry Cream Cheese<b>♥</b></span><span>Chocolate Banana<b>♥</b></span><span>Coming soon<b>♥</b></span><span>Made with love<b>♥</b></span></div></div>
+
 
 <!-- HOW IT WORKS -->
 <section class="how">
-  <h2>How it works</h2>
-  <p class="how-sub">From partner bakery to vending machine — quality you can trust at every step.</p>
+  <h2>Only the best make the cut</h2>
+  <p class="how-sub">We're obsessive about flavour. Here's how we'll bring you something truly special.</p>
   <div class="how-steps">
     <div class="how-step">
-      <div class="how-step-icon">🏭</div>
-      <h3>Partner bakeries</h3>
-      <p>Certified bakeries produce cupcakes to our exact specification and quality standards.</p>
+      <div class="how-step-icon">🔍</div>
+      <h3>We seek out the finest</h3>
+      <p>We're scouting the region's best bakeries, tasting and testing to find the ones that truly stand out.</p>
     </div>
     <div class="how-step">
-      <div class="how-step-icon">📦</div>
-      <h3>Loui's packaging</h3>
-      <p>Every cupcake is individually packaged with our branding, allergen info, and best-before date.</p>
+      <div class="how-step-icon">✨</div>
+      <h3>We curate the selection</h3>
+      <p>Only the recipes that make our mouths water will make it onto the menu. No compromises.</p>
     </div>
     <div class="how-step">
-      <div class="how-step-icon">🤖</div>
-      <h3>Vending machines</h3>
-      <p>Our machines are stocked fresh and placed at convenient locations across the region.</p>
+      <div class="how-step-icon">📍</div>
+      <h3>We bring them to you</h3>
+      <p>Fresh cupcakes will be stocked at locations across the region — so the best is always within reach.</p>
     </div>
     <div class="how-step">
       <div class="how-step-icon">🧁</div>
-      <h3>Your treat</h3>
-      <p>Pick your flavour, pay, enjoy. A quality cupcake whenever and wherever you need one.</p>
+      <h3>You just enjoy</h3>
+      <p>Soon you'll just pick your flavour and indulge. Bakery quality, no queue.</p>
     </div>
   </div>
 </section>
@@ -106,48 +292,145 @@
 <!-- PRODUCTS -->
 <section class="products" id="products">
   <div class="section-eyebrow">Our range</div>
-  <h2 class="section-title">Cupcake selection</h2>
-  <p class="section-sub">A carefully chosen range of flavours — available at our vending machine locations. Seasonal specials rotate throughout the year.</p>
-  <div class="product-notice">
-    <span>🏪</span>
-    <span><strong>Available in-machine only.</strong> All cupcakes are produced by our partner bakeries and sold exclusively through Loui's Cupcakes vending machines.</span>
-  </div>
+  <h2 class="section-title">Flavours to fall for</h2>
+  <p class="section-sub">A first look at the flavours we're curating — each chosen from the finest bakeries in the region because it made us stop mid-bite. Full menu and prices coming at launch.</p>
+
+  <div class="products-range-label">Always available</div>
   <div class="products-grid">
     <div class="product-card">
-      <span class="product-emoji">🍪</span>
-      <div class="product-name">Oreo Cupcake</div>
-      <div class="product-price">€3.50</div>
-      <span class="product-tag tag-classic">Classic</span>
+      <div class="product-img-wrap">
+        <img src="oreo.jpg" alt="Oreo Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Oreo Cupcake</div>
+        <div class="product-desc">Light and fluffy vanilla cupcake base with plenty of chopped Oreo cookies and a creamy, dreamy chocolate-vanilla swirl frosting on top.</div>
+        <div class="product-footer">
+          <div class="product-price product-price--soon">Coming soon</div>
+          <span class="product-tag tag-classic">Always available</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍫</span>
-      <div class="product-name">Chocolate Brownie</div>
-      <div class="product-price">€3.80</div>
-      <span class="product-tag tag-special">Signature</span>
+      <div class="product-img-wrap">
+        <img src="choc_brownie.jpg" alt="Chocolate Brownie Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Chocolate Brownie Cupcake</div>
+        <div class="product-desc">Dense, fudgy brownie-style sponge loaded with dark chocolate chips, crowned with a rich chocolate ganache swirl. For the serious chocolate lover.</div>
+        <div class="product-footer">
+          <div class="product-price product-price--soon">Coming soon</div>
+          <span class="product-tag tag-special">Signature</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍓</span>
-      <div class="product-name">Strawberry Shortcake</div>
-      <div class="product-price">€3.80</div>
-      <span class="product-tag tag-special">Signature</span>
+      <div class="product-img-wrap">
+        <img src="red_velvet.jpg" alt="Red Velvet Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Red Velvet Cupcake</div>
+        <div class="product-desc">Stunning crimson sponge with a hint of cocoa, finished with a generous swirl of silky cream cheese frosting. Classic, elegant, irresistible.</div>
+        <div class="product-footer">
+          <div class="product-price product-price--soon">Coming soon</div>
+          <span class="product-tag tag-classic">Always available</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍋</span>
-      <div class="product-name">Lemon Cupcake</div>
-      <div class="product-price">€3.50</div>
-      <span class="product-tag tag-classic">Classic</span>
+      <div class="product-img-wrap">
+        <img src="carrot_cake.jpg" alt="Carrot Cake Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Carrot Cake Cupcake</div>
+        <div class="product-desc">Warmly spiced with cinnamon and nutmeg, packed with freshly grated carrot and topped with a dreamy cream cheese frosting. Comfort in every bite.</div>
+        <div class="product-footer">
+          <div class="product-price product-price--soon">Coming soon</div>
+          <span class="product-tag tag-classic">Always available</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🫐</span>
-      <div class="product-name">Blueberry Cream Cheese</div>
-      <div class="product-price">€3.50</div>
-      <span class="product-tag tag-classic">Classic</span>
+      <div class="product-img-wrap">
+        <img src="blueberry.jpg" alt="Blueberry Cream Cheese Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Blueberry Cream Cheese Cupcake</div>
+        <div class="product-desc">Bursting with juicy blueberries baked right into the sponge, topped with a tangy cream cheese swirl and fresh blueberries. Sweet meets sharp, perfectly.</div>
+        <div class="product-footer">
+          <div class="product-price product-price--soon">Coming soon</div>
+          <span class="product-tag tag-classic">Always available</span>
+        </div>
+      </div>
     </div>
     <div class="product-card">
-      <span class="product-emoji">🍂</span>
-      <div class="product-name">Pumpkin Cupcake</div>
-      <div class="product-price">€3.80</div>
-      <span class="product-tag tag-seasonal">Seasonal</span>
+      <div class="product-img-wrap">
+        <img src="choc_banana.jpg" alt="Chocolate Banana Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Chocolate Banana Cupcake</div>
+        <div class="product-desc">Moist banana sponge swirled through with dark chocolate, topped with chocolate buttercream and a caramelised banana chip. A match made in heaven.</div>
+        <div class="product-footer">
+          <div class="product-price product-price--soon">Coming soon</div>
+          <span class="product-tag tag-classic">Always available</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="products-range-label products-range-label--seasonal">The Four Seasons 🍂🌸☀️❄️</div>
+  <p class="section-sub" style="text-align:center;margin-bottom:32px;">Our seasonal cupcakes change with the year — always something to look forward to.</p>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="spring_sprinkle.jpg" alt="Spring Sprinkle Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Spring Sprinkle Cupcake</div>
+        <div class="product-desc">Moist, rich chocolate cupcake topped with coconut buttercream frosting, garnished with toasted coconut and Easter egg candies.</div>
+        <div class="product-footer">
+          <div class="product-price product-price--soon">Coming soon</div>
+          <span class="product-tag tag-seasonal">🌸 Spring</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="strawberry.jpg" alt="Strawberry Shortcake Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Strawberry Shortcake Cupcake</div>
+        <div class="product-desc">Fluffy shortcake sponge layered with fresh strawberry compote and topped with whipped cream frosting and a whole strawberry. Summer in your hand.</div>
+        <div class="product-footer">
+          <div class="product-price product-price--soon">Coming soon</div>
+          <span class="product-tag tag-seasonal">☀️ Summer</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="pumpkin.jpg" alt="Pumpkin Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Pumpkin Cupcake</div>
+        <div class="product-desc">Spiced pumpkin sponge with hints of ginger and cinnamon, finished with a cinnamon cream cheese frosting and a dusting of autumnal spice. Autumn in a bite.</div>
+        <div class="product-footer">
+          <div class="product-price product-price--soon">Coming soon</div>
+          <span class="product-tag tag-seasonal">🍂 Autumn</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="apple_crumble.jpg" alt="Apple Crumble Cupcake" class="product-img" loading="lazy"/>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Apple Crumble Cupcake</div>
+        <div class="product-desc">Soft apple and cinnamon sponge with a buttery crumble topping and warm vanilla frosting. Like a hug on a cold winter's day.</div>
+        <div class="product-footer">
+          <div class="product-price product-price--soon">Coming soon</div>
+          <span class="product-tag tag-seasonal">❄️ Winter</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -171,9 +454,8 @@
     <div class="coming-soon-map">
       <div style="font-size:48px;margin-bottom:16px;">📍</div>
       <h3>Locations coming soon</h3>
-      <p>Our first machine location is currently being finalised. Sign up to be notified when a Loui's Cupcakes machine opens near you.</p>
-      <div style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--pink);background:rgba(247,168,184,0.15);border:1px solid rgba(247,168,184,0.3);padding:6px 14px;border-radius:100px;margin-bottom:20px;">First location — announcing soon</div><br>
-      <a href="#contact" class="btn-primary" style="background:var(--pink);color:var(--brown);">Get notified</a>
+      <p>Our first machines are on their way. Sign up to be notified when a Loui's Cupcakes machine opens near you.</p>
+      <a href="#contact" class="btn-primary">Get notified</a>
     </div>
   </div>
 </section>
@@ -182,43 +464,23 @@
 <section class="about" id="about">
   <div class="about-inner">
     <div class="section-eyebrow">About us</div>
-    <h2 class="section-title">We're not a bakery. We're a cupcake brand.</h2>
-    <p class="section-sub">Loui's Cupcakes by Alston Ponde-Silcott is a modern distribution concept built around one idea: great cupcakes should be available whenever and wherever you want them.</p>
+    <h2 class="section-title">Obsessed with finding the perfect cupcake.</h2>
+    <p class="section-sub">Loui's Cupcakes is built on a simple obsession: bringing the very best cupcakes in the region to you — wherever you are, whenever you want them.</p>
     <div class="about-model">
       <div class="model-step">
-        <div class="model-step-num">Step 01</div>
-        <h3>Partner bakeries produce</h3>
-        <p>We work with certified partner bakeries who produce cupcakes to our exact recipe and quality specification.</p>
+        <div class="model-step-num">Our mission</div>
+        <h3>Only the finest make the cut</h3>
+        <p>We've tasted our way through the region's bakeries so we can hand-pick only the recipes that are truly worth your time — and your taste buds.</p>
       </div>
       <div class="model-step">
-        <div class="model-step-num">Step 02</div>
-        <h3>Loui's brands & packages</h3>
-        <p>Every cupcake is packaged in Loui's Cupcakes branded boxes with allergen information, ingredients, and best-before dates.</p>
+        <div class="model-step-num">Our promise</div>
+        <h3>Bakery quality, always fresh</h3>
+        <p>Every cupcake in our machines is held to the same standard as what you'd expect walking into the best patisserie in town. No shortcuts.</p>
       </div>
       <div class="model-step">
-        <div class="model-step-num">Step 03</div>
-        <h3>You find us in the machine</h3>
-        <p>Our vending machines are stocked fresh and placed at convenient locations — schools, shopping centres, gyms, and more.</p>
-      </div>
-    </div>
-    <div class="about-roadmap">
-      <h3>Our roadmap</h3>
-      <div class="roadmap-phases">
-        <div class="roadmap-phase phase-active">
-          <div class="phase-label">Now — Phase 1</div>
-          <div class="phase-title">Distributor model</div>
-          <div class="phase-desc">Partner bakeries, Loui's branding, vending machines</div>
-        </div>
-        <div class="roadmap-phase">
-          <div class="phase-label">Phase 2</div>
-          <div class="phase-title">Qualification</div>
-          <div class="phase-desc">Working towards our own production licence</div>
-        </div>
-        <div class="roadmap-phase">
-          <div class="phase-label">Phase 3</div>
-          <div class="phase-title">Own production</div>
-          <div class="phase-desc">Full vertical integration — baking our own recipes</div>
-        </div>
+        <div class="model-step-num">Our vision</div>
+        <h3>A treat within everyone's reach</h3>
+        <p>We're placing our machines at the spots you already pass through — because a moment of joy shouldn't require a detour.</p>
       </div>
     </div>
   </div>
@@ -227,9 +489,9 @@
 <!-- CATERING -->
 <section class="catering" id="catering">
   <div class="catering-card">
-    <div class="catering-soon">Coming later in 2026</div>
+    <div class="catering-soon">Coming in 2027</div>
     <h2>Catering & events</h2>
-    <p>Birthdays, weddings, corporate events, school celebrations — cupcakes for every occasion. Our catering service is currently in development and will launch later this year. Register your interest and we'll be in touch when it's ready.</p>
+    <p>Birthdays, weddings, corporate events, school celebrations — cupcakes for every occasion. Our catering service is currently in development and will launch in 2027. Register your interest and we'll be in touch when it's ready.</p>
     <div class="catering-occasions">
       <span class="occasion-pill">🎂 Birthdays</span>
       <span class="occasion-pill">💒 Weddings</span>
@@ -286,7 +548,7 @@
         <select id="reason" name="reason">
           <option value="">Select a reason</option>
           <option value="location">I'd like to host a vending machine</option>
-          <option value="catering">Catering enquiry (2026)</option>
+          <option value="catering">Catering enquiry (2027)</option>
           <option value="supplier">Supplier / partnership enquiry</option>
           <option value="general">General question</option>
         </select>
@@ -305,8 +567,8 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-logo"><img src="images/logo.png" alt="Loui's Cupcakes"></div>
-      <p class="footer-tagline">A modern cupcake distribution brand. Saar-Mosel region, Germany.</p>
+      <div class="footer-logo">Loui's <span>Cupcakes</span></div>
+      <p class="footer-tagline">The finest cupcakes in the region, always within reach.</p>
     </div>
     <div>
       <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Navigate</div>
@@ -321,20 +583,19 @@
     <div>
       <div style="font-size:12px;font-weight:600;color:rgba(255,245,236,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Languages</div>
       <div class="footer-links">
-        <a href="index.html">English</a>
-        <a href="de.html">Deutsch</a>
+        <a href="index.html">Deutsch</a>
         <a href="fr.html">Français</a>
+        <a href="en.html">English</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-legal">
-      © 2026 Loui's Cupcakes by Alston Ponde-Silcott. All cupcakes produced by certified partner bakeries.<br>
-      Distributed by Loui's Cupcakes — Vertrieb von verpackten Backwaren und Süßwaren über Verkaufsautomaten.
+      © 2026 Loui's Cupcakes by Alston Ponde-Silcott. All rights reserved.
     </div>
     <div style="display:flex;gap:16px;">
-      <a href="de.html#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Impressum</a>
-      <a href="de.html#datenschutz" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Datenschutz</a>
+      <a href="index.html#impressum" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Impressum</a>
+      <a href="index.html#datenschutz" style="color:rgba(255,245,236,0.4);text-decoration:none;font-size:12px;">Datenschutz</a>
     </div>
   </div>
 </footer>
@@ -350,6 +611,74 @@
     document.getElementById('form-success').style.display = 'block';
     e.target.reset();
   }
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.how-step,.product-card,.model-step,.location-type,.coming-soon-map,.catering-card,.contact-info,.contact-form,.section-title,.section-eyebrow,.section-sub,.products-range-label');
+  revealEls.forEach(el=>el.classList.add('reveal'));
+  const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+  revealEls.forEach(el=>io.observe(el));
+
+
+  // ===== Seasonal theme & particles =====
+  (function(){
+    const m = new Date().getMonth()+1;
+    let season = m>=3&&m<=5?'spring':m>=6&&m<=8?'summer':m>=9&&m<=11?'autumn':'winter';
+    const forced = new URLSearchParams(location.search).get('season');
+    if (['spring','summer','autumn','winter'].indexOf(forced) > -1) season = forced;
+    document.body.classList.add('season-'+season);
+    // Seasonal hero cupcake
+    const heroImg = document.querySelector('.hero-photo');
+    if (heroImg) {
+      const srcMap = {spring:'spring_sprinkle.jpg',summer:'strawberry.jpg',autumn:'pumpkin.jpg',winter:'apple_crumble.jpg'};
+      heroImg.src = srcMap[season];
+      try {
+        const altMap = JSON.parse(heroImg.dataset.seasonAlts||'{}');
+        if (altMap[season]) heroImg.alt = altMap[season];
+      } catch(e){}
+    }
+
+
+    // Highlight the in-season cupcake (order: spring, summer, autumn, winter)
+    const grids = document.querySelectorAll('.products-grid');
+    if (grids[1]) {
+      const idx = {spring:0,summer:1,autumn:2,winter:3}[season];
+      const card = grids[1].querySelectorAll('.product-card')[idx];
+      if (card) card.classList.add('in-season');
+    }
+
+    // Falling particles
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const wrap = document.createElement('div');
+    wrap.className = 'season-particles';
+    wrap.setAttribute('aria-hidden','true');
+    const small = window.matchMedia('(max-width: 700px)').matches;
+    const count = small ? 12 : 22;
+    const confettiColors = ['#E2475C','#E8A93D','#F7A8B8','#8FAE5D','#FFFFFF'];
+    const glyphs = {winter:['❄','❅','✻'],autumn:['🍂','🍁'],spring:['🌸','✿']}[season];
+    for (let i=0;i<count;i++){
+      const p = document.createElement('span');
+      p.className = 'season-particle';
+      p.style.left = Math.random()*100+'vw';
+      p.style.setProperty('--sway',(Math.random()*160-80)+'px');
+      p.style.setProperty('--spin',(Math.random()*520+180)+'deg');
+      p.style.animationDuration = (Math.random()*10+8)+'s';
+      p.style.animationDelay = (-Math.random()*18)+'s';
+      if (season==='summer'){
+        p.classList.add('confetti');
+        const s = Math.random()*6+5;
+        p.style.width = s+'px';
+        p.style.height = (s*1.8)+'px';
+        p.style.background = confettiColors[Math.floor(Math.random()*confettiColors.length)];
+      } else {
+        p.classList.add('glyph');
+        p.textContent = glyphs[Math.floor(Math.random()*glyphs.length)];
+        p.style.fontSize = (Math.random()*12+11)+'px';
+        if (season==='winter'){ p.style.color = '#B9D4EC'; }
+      }
+      wrap.appendChild(p);
+    }
+    document.body.appendChild(wrap);
+  })();
 </script>
 </body>
 </html>
