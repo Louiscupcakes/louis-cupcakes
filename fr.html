@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loui's Cupcakes — Un goût de bonheur</title>
-  <meta name="description" content="Loui\'s Cupcakes arrive bientôt dans la région Saar-Moselle — des cupcakes premium issus des meilleures boulangeries locales, bientôt via notre réseau de distributeurs." />
+  <meta name="description" content="Loui's Cupcakes arrive bientôt dans la région Saar-Moselle — des cupcakes premium issus des meilleures boulangeries locales, bientôt via notre réseau de distributeurs." />
   <style>
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:400 700;font-display:swap;src:url('fonts/fraunces-v38-latin-regular.woff2') format('woff2');}
 @font-face{font-family:'Fraunces';font-style:italic;font-weight:400 700;font-display:swap;src:url('fonts/fraunces-v38-latin-italic.woff2') format('woff2');}
@@ -116,7 +116,7 @@ section{padding:84px 6vw}
 .locations::before{content:"";position:absolute;top:-1px;left:0;right:0;height:30px;background-image:radial-gradient(circle at 30px -10px,var(--cream) 26px,transparent 27px);background-size:60px 30px;background-repeat:repeat-x}
 .locations-inner{max-width:1140px;margin:0 auto}
 .location-types{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:40px 0}
-.location-type{background:var(--cream);border-radius:16px;padding:20px 14px;text-align:center;font-weight:700;font-size:14.5px;border:1px solid rgba(67,37,26,.05);transition:.25s}
+.location-type{background:var(--cream);border-radius:16px;padding:20px 14px;text-align:center;font-weight:700;font-size:14.5px;border:1px solid rgba(67,37,26,.05);transition:.25s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;line-height:1.3;overflow-wrap:anywhere;word-break:break-word;hyphens:auto;max-width:100%}
 .location-type:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
 .coming-soon-map{background:var(--blush);border:2px dashed var(--raspberry);border-radius:var(--radius);padding:44px 30px;text-align:center;max-width:620px;margin:0 auto}
 .coming-soon-map h3{font-size:24px;margin:10px 0 8px}
@@ -258,7 +258,7 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
   </div>
 </section>
 <!-- MARQUEE -->
-<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Oreo<b>♥</b></span><span>Brownie Chocolat<b>♥</b></span><span>Red Velvet<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Myrtille & Fromage frais<b>♥</b></span><span>Banane & Chocolat<b>♥</b></span><span>Bientôt disponible<b>♥</b></span><span>Fait avec amour<b>♥</b></span><span>Oreo<b>♥</b></span><span>Brownie Chocolat<b>♥</b></span><span>Red Velvet<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Myrtille & Fromage frais<b>♥</b></span><span>Banane & Chocolat<b>♥</b></span><span>Bientôt disponible<b>♥</b></span><span>Fait avec amour<b>♥</b></span></div></div>
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Oreo<b>♥</b></span><span>Brownie Chocolat<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Myrtille & Fromage frais<b>♥</b></span><span>Bientôt disponible<b>♥</b></span><span>Fait avec amour<b>♥</b></span><span>Oreo<b>♥</b></span><span>Brownie Chocolat<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Myrtille & Fromage frais<b>♥</b></span><span>Bientôt disponible<b>♥</b></span><span>Fait avec amour<b>♥</b></span></div></div>
 
 
 <!-- HOW IT WORKS -->
@@ -314,14 +314,6 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
       </div>
     </div>
     <div class="product-card">
-      <div class="product-img-wrap"><img src="red_velvet.jpg" alt="Cupcake Red Velvet" class="product-img" loading="lazy"/></div>
-      <div class="product-info">
-        <div class="product-name">Cupcake Red Velvet</div>
-        <div class="product-desc">Éponge rouge écarlate avec une touche de cacao, garnie d'une généreuse swirl de frosting au fromage frais. Classique, élégant, irrésistible.</div>
-        <div class="product-footer"><div class="product-price product-price--soon">Bientôt disponible</div><span class="product-tag tag-classic">Toujours disponible</span></div>
-      </div>
-    </div>
-    <div class="product-card">
       <div class="product-img-wrap"><img src="carrot_cake.jpg" alt="Cupcake Carrot Cake" class="product-img" loading="lazy"/></div>
       <div class="product-info">
         <div class="product-name">Cupcake Carrot Cake</div>
@@ -334,14 +326,6 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
       <div class="product-info">
         <div class="product-name">Cupcake Myrtille & Fromage frais</div>
         <div class="product-desc">Débordant de myrtilles juteuses dans la pâte, surmonté d'une swirl de fromage frais acidulé et de myrtilles fraîches. Doux rencontre piquant, à la perfection.</div>
-        <div class="product-footer"><div class="product-price product-price--soon">Bientôt disponible</div><span class="product-tag tag-classic">Toujours disponible</span></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="product-img-wrap"><img src="https://images.unsplash.com/images/choc_banana.jpg" alt="Cupcake Banane & Chocolat" class="product-img" loading="lazy"/></div>
-      <div class="product-info">
-        <div class="product-name">Cupcake Banane & Chocolat</div>
-        <div class="product-desc">Moelleux à la banane marbré de chocolat noir, garni de crème au beurre chocolatée et d'une chips de banane caramélisée. Un mariage fait au paradis.</div>
         <div class="product-footer"><div class="product-price product-price--soon">Bientôt disponible</div><span class="product-tag tag-classic">Toujours disponible</span></div>
       </div>
     </div>
