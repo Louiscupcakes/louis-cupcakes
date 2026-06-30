@@ -48,6 +48,14 @@ nav {
   font-weight: 700;
   color: var(--brown);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 38px;
+  width: auto;
+  display: block;
 }
 
 .nav-logo span { color: var(--pink-dark); }
@@ -440,14 +448,15 @@ nav {
   padding: 18px 16px;
   border: 1px solid rgba(247,168,184,0.3);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   font-size: 13px;
   font-weight: 500;
   color: var(--text-mid);
+  line-height: 1.4;
 }
 
-.location-type span:first-child { font-size: 20px; }
+.location-type span:first-child { font-size: 20px; line-height: 1; flex-shrink: 0; }
 
 .coming-soon-map {
   background: var(--brown);
@@ -772,6 +781,12 @@ footer {
   font-size: 20px;
   color: var(--cream);
   margin-bottom: 8px;
+}
+
+.footer-logo img {
+  height: 34px;
+  width: auto;
+  display: block;
 }
 
 .footer-logo span { color: var(--pink); }
