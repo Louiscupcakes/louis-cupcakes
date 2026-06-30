@@ -116,7 +116,7 @@ section{padding:84px 6vw}
 .locations::before{content:"";position:absolute;top:-1px;left:0;right:0;height:30px;background-image:radial-gradient(circle at 30px -10px,var(--cream) 26px,transparent 27px);background-size:60px 30px;background-repeat:repeat-x}
 .locations-inner{max-width:1140px;margin:0 auto}
 .location-types{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:40px 0}
-.location-type{background:var(--cream);border-radius:16px;padding:20px 14px;text-align:center;font-weight:700;font-size:14.5px;border:1px solid rgba(67,37,26,.05);transition:.25s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;line-height:1.3;overflow-wrap:break-word;word-break:break-word;hyphens:auto}
+.location-type{background:var(--cream);border-radius:16px;padding:20px 14px;text-align:center;font-weight:700;font-size:14.5px;border:1px solid rgba(67,37,26,.05);transition:.25s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;line-height:1.3;overflow-wrap:anywhere;word-break:break-word;hyphens:auto;max-width:100%}
 .location-type:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
 .coming-soon-map{background:var(--blush);border:2px dashed var(--raspberry);border-radius:var(--radius);padding:44px 30px;text-align:center;max-width:620px;margin:0 auto}
 .coming-soon-map h3{font-size:24px;margin:10px 0 8px}
@@ -258,7 +258,7 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
   </div>
 </section>
 <!-- MARQUEE -->
-<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Oreo<b>♥</b></span><span>Chocolate Brownie<b>♥</b></span><span>Red Velvet<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Blaubeere &amp; Frischkäse<b>♥</b></span><span>Chocolate Banana<b>♥</b></span><span>Bald erhältlich<b>♥</b></span><span>Mit Liebe gemacht<b>♥</b></span><span>Oreo<b>♥</b></span><span>Chocolate Brownie<b>♥</b></span><span>Red Velvet<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Blaubeere &amp; Frischkäse<b>♥</b></span><span>Chocolate Banana<b>♥</b></span><span>Bald erhältlich<b>♥</b></span><span>Mit Liebe gemacht<b>♥</b></span></div></div>
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Oreo<b>♥</b></span><span>Chocolate Brownie<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Blaubeere &amp; Frischkäse<b>♥</b></span><span>Bald erhältlich<b>♥</b></span><span>Mit Liebe gemacht<b>♥</b></span><span>Oreo<b>♥</b></span><span>Chocolate Brownie<b>♥</b></span><span>Carrot Cake<b>♥</b></span><span>Blaubeere &amp; Frischkäse<b>♥</b></span><span>Bald erhältlich<b>♥</b></span><span>Mit Liebe gemacht<b>♥</b></span></div></div>
 
 
 <!-- HOW IT WORKS -->
@@ -325,19 +325,6 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
     </div>
     <div class="product-card">
       <div class="product-img-wrap">
-        <img src="red_velvet.jpg" alt="Red Velvet Cupcake" class="product-img" loading="lazy"/>
-      </div>
-      <div class="product-info">
-        <div class="product-name">Red Velvet Cupcake</div>
-        <div class="product-desc">Wunderschöner, leuchtend roter Teig mit einer Kakaonote, vollendet mit einer großzügigen Swirl aus seidiger Frischkäseglasur. Klassisch, elegant, unwiderstehlich.</div>
-        <div class="product-footer">
-          <div class="product-price product-price--soon">Bald erhältlich</div>
-          <span class="product-tag tag-classic">Immer erhältlich</span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="product-img-wrap">
         <img src="carrot_cake.jpg" alt="Carrot Cake Cupcake" class="product-img" loading="lazy"/>
       </div>
       <div class="product-info">
@@ -356,19 +343,6 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
       <div class="product-info">
         <div class="product-name">Blaubeere &amp; Frischkäse Cupcake</div>
         <div class="product-desc">Voller saftiger Blaubeeren direkt im Teig, gekrönt von einer würzigen Frischkäse-Swirl und frischen Blaubeeren. Süß trifft herzhaft, perfekt ausbalanciert.</div>
-        <div class="product-footer">
-          <div class="product-price product-price--soon">Bald erhältlich</div>
-          <span class="product-tag tag-classic">Immer erhältlich</span>
-        </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="product-img-wrap">
-        <img src="choc_banana.jpg" alt="Chocolate Banana Cupcake" class="product-img" loading="lazy"/>
-      </div>
-      <div class="product-info">
-        <div class="product-name">Chocolate Banana Cupcake</div>
-        <div class="product-desc">Saftiger Bananenteig durchzogen von dunkler Schokolade, gekrönt von Schoko-Buttercreme und einem karamellisierten Bananenchip. Eine Traumkombination.</div>
         <div class="product-footer">
           <div class="product-price product-price--soon">Bald erhältlich</div>
           <span class="product-tag tag-classic">Immer erhältlich</span>
