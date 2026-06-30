@@ -122,6 +122,13 @@ section{padding:84px 6vw}
 .coming-soon-map h3{font-size:24px;margin:10px 0 8px}
 .coming-soon-map p{color:var(--cocoa-soft);margin-bottom:22px}
 
+.location-live-card{background:var(--milk);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md);max-width:620px;margin:0 auto;border:1px solid rgba(67,37,26,.06)}
+.location-live-map{line-height:0}
+.location-live-info{padding:28px 30px 32px;text-align:center}
+.location-live-eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--caramel);margin-bottom:8px}
+.location-live-info h3{font-size:22px;margin-bottom:6px}
+.location-live-info p{color:var(--cocoa-soft);font-size:15px}
+
 /* ===== ABOUT ===== */
 .about-inner{max-width:1140px;margin:0 auto}
 .about-model{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:46px}
@@ -425,14 +432,59 @@ body.season-winter{--raspberry:#A92A45;--raspberry-deep:#8A1F36;--caramel:#C9913
         <div class="location-type"><span>🏥</span> Gesundheitseinrichtungen</div>
       </div>
     </div>
-    <div class="coming-soon-map">
+    <div class="coming-soon-map" id="locationPlaceholder">
       <div style="font-size:48px;margin-bottom:16px;">📍</div>
       <h3>Standorte folgen in Kürze</h3>
       <p>Unsere ersten Automaten sind auf dem Weg. Tragen Sie sich ein und wir benachrichtigen Sie, sobald ein Loui's Cupcakes Automat in Ihrer Nähe eröffnet.</p>
       <a href="#contact" class="btn-primary">Benachrichtigt werden</a>
     </div>
+    <div class="location-live-card" id="locationLive" style="display:none;">
+      <div class="location-live-map">
+        <iframe
+          id="locationMapFrame"
+          width="100%"
+          height="220"
+          style="border:0;border-radius:14px 14px 0 0;"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="">
+        </iframe>
+      </div>
+      <div class="location-live-info">
+        <div class="location-live-eyebrow">Unser erster Standort</div>
+        <h3 id="locationName">Name des Standorts</h3>
+        <p id="locationAddress">Straße, PLZ Ort</p>
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  // ===== Hidden location preview (add ?preview=location to the URL to view) =====
+  (function(){
+    const params = new URLSearchParams(location.search);
+    if (params.get('preview') !== 'location') return;
+
+    // Fill in real details here once a location is confirmed:
+    const LOCATION = {
+      name: "La Enoteca Saarlouis",
+      address: "Kavalleriestraße 3, 66740 Saarlouis",
+      mapEmbedSrc: "https://www.google.com/maps?q=Kavalleriestra%C3%9Fe+3,+66740+Saarlouis&output=embed"
+    };
+
+    const placeholder = document.getElementById('locationPlaceholder');
+    const live = document.getElementById('locationLive');
+    if (!placeholder || !live) return;
+
+    document.getElementById('locationName').textContent = LOCATION.name;
+    document.getElementById('locationAddress').textContent = LOCATION.address;
+    document.getElementById('locationMapFrame').src = LOCATION.mapEmbedSrc;
+
+    placeholder.style.display = 'none';
+    live.style.display = 'block';
+  })();
+</script>
 
 <!-- ABOUT -->
 <section class="about" id="about">
