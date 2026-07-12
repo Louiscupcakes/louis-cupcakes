@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warteliste · Loui's Cupcakes</title>
+<meta name="description" content="Sei von Anfang an dabei – trag dich in die Warteliste von Loui's Cupcakes ein.">
+<!-- Fonts: portable via Google Fonts. To match your site exactly, swap these
+     for your self-hosted @font-face rules for Fraunces & Karla. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF7F0; --panel:#FCEFE1; --ink:#43251A; --cocoa:#2E1810;
+    --raspberry:#D6336C; --gold:#C9913D; --line:#E6D3C1;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:var(--cream); color:var(--ink); font-family:"Karla",system-ui,sans-serif; }
+  body{ min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px 20px; }
+  .wrap{ width:100%; max-width:560px; text-align:center; }
+
+  .logo{ height:56px; width:auto; margin:0 auto 26px; display:block; }
+  .eyebrow{ font-weight:700; font-size:12px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); }
+  .eyebrow .dot{ color:var(--raspberry); }
+  h1{ font-family:"Fraunces",serif; font-weight:600; font-size:34px; line-height:1.05;
+      letter-spacing:-.01em; margin:14px 0 0; }
+  h1 em{ font-style:italic; color:var(--raspberry); }
+  .sub{ font-family:"Fraunces",serif; font-weight:400; font-size:16px; line-height:1.45;
+        color:var(--cocoa); margin:14px auto 0; max-width:440px; }
+
+  /* language toggle */
+  .langbar{ display:inline-flex; gap:2px; margin:22px auto 0; background:#fff;
+    border:1px solid var(--line); border-radius:999px; padding:3px; }
+  .langbar button{ font-family:"Karla"; font-weight:700; font-size:12px; letter-spacing:.08em;
+    border:0; background:transparent; color:var(--cocoa); padding:6px 14px; border-radius:999px; cursor:pointer; }
+  .langbar button[aria-pressed="true"]{ background:var(--ink); color:var(--cream); }
+
+  .card{ margin-top:26px; background:
+      radial-gradient(120% 80% at 50% 0%, rgba(201,145,61,.10), rgba(252,239,225,0) 60%), var(--panel);
+    border:1px solid rgba(201,145,61,.42); border-radius:22px; padding:28px 26px; text-align:left; }
+  .field{ margin-bottom:16px; }
+  label.flabel{ display:block; font-weight:700; font-size:12.5px; letter-spacing:.02em;
+    color:var(--ink); margin-bottom:7px; }
+  input[type=email], input[type=text]{
+    width:100%; font-family:"Karla"; font-size:16px; color:var(--ink);
+    background:#fff; border:1px solid var(--line); border-radius:12px; padding:13px 14px; }
+  input:focus{ outline:2px solid var(--raspberry); outline-offset:1px; border-color:var(--raspberry); }
+
+  .consent{ display:flex; gap:11px; align-items:flex-start; margin:4px 0 20px; }
+  .consent input{ width:19px; height:19px; margin-top:2px; accent-color:var(--raspberry); flex:0 0 auto; }
+  .consent label{ font-size:13px; line-height:1.4; color:var(--cocoa); }
+  .consent a{ color:var(--raspberry); text-decoration:underline; }
+
+  button.submit{ width:100%; font-family:"Karla"; font-weight:700; font-size:15.5px; letter-spacing:.02em;
+    color:var(--cream); background:var(--raspberry); border:0; border-radius:12px; padding:15px 18px; cursor:pointer;
+    transition:transform .06s ease, background .2s ease; }
+  button.submit:hover{ background:#c02b60; }
+  button.submit:active{ transform:translateY(1px); }
+  button.submit:focus-visible{ outline:2px solid var(--ink); outline-offset:2px; }
+
+  .fineprint{ margin-top:16px; font-size:12px; color:#8a6f5f; letter-spacing:.01em; }
+
+  .success{ display:none; text-align:center; padding:10px 6px; }
+  .success h2{ font-family:"Fraunces",serif; font-weight:600; font-size:24px; color:var(--ink); }
+  .success p{ font-family:"Fraunces",serif; font-weight:400; font-size:15px; color:var(--cocoa); margin-top:8px; }
+  .is-done .card, .is-done .langbar{ display:none; }
+  .is-done .success{ display:block; }
+
+  .foot{ margin-top:24px; font-size:12px; }
+  .foot a{ color:var(--ink); text-decoration:none; font-weight:700; }
+  .foot .sep{ color:var(--gold); margin:0 8px; }
+
+  @media (max-width:420px){ h1{font-size:29px;} .card{padding:24px 20px;} }
+  @media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
+</style>
+</head>
+<body>
+  <main class="wrap" id="wrap">
+    <img class="logo" src="loui-logo.svg" alt="Loui's Cupcakes">
+    <div class="eyebrow" data-i18n="eyebrow">Warteliste <span class="dot">&middot;</span> Waitlist <span class="dot">&middot;</span> Liste d&rsquo;attente</div>
+    <h1 data-i18n="head"></h1>
+    <p class="sub" data-i18n="sub"></p>
+
+    <div class="langbar" role="group" aria-label="Sprache / Language">
+      <button type="button" data-lang="de" aria-pressed="true">DE</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+
+    <!-- Netlify Forms: detected at deploy time. Submissions appear in your
+         Netlify dashboard under Forms. -->
+    <form class="card" name="warteliste" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/warteliste?ok=1">
+      <input type="hidden" name="form-name" value="warteliste">
+      <input type="hidden" name="sprache" id="langField" value="de">
+      <p hidden aria-hidden="true"><label>Bitte leer lassen: <input name="bot-field"></label></p>
+
+      <div class="field">
+        <label class="flabel" for="email" data-i18n="lblEmail"></label>
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@beispiel.de">
+      </div>
+      <div class="field">
+        <label class="flabel" for="vorname" data-i18n="lblName"></label>
+        <input type="text" id="vorname" name="vorname" autocomplete="given-name">
+      </div>
+
+      <div class="consent">
+        <input type="checkbox" id="consent" name="einwilligung" required value="ja">
+        <label for="consent" data-i18n="consent"></label>
+      </div>
+
+      <button type="submit" class="submit" data-i18n="btn"></button>
+      <p class="fineprint" data-i18n="fine"></p>
+    </form>
+
+    <div class="success" role="status" aria-live="polite">
+      <h2 data-i18n="okHead"></h2>
+      <p data-i18n="okBody"></p>
+    </div>
+
+    <div class="foot">
+      <a href="https://louiscupcakes.com">louiscupcakes.com</a>
+      <span class="sep">&middot;</span>
+      <a href="https://instagram.com/louiscupcakes.de">@louiscupcakes.de</a>
+    </div>
+  </main>
+
+<script>
+  const T = {
+    de:{ head:'Sei von Anfang an <em>dabei.</em>',
+         sub:'Trag dich in die Warteliste ein und erfahre als Erste&middot;r, wann und wo dein erster Cupcake wartet.',
+         lblEmail:'E-Mail-Adresse', lblName:'Vorname (optional)',
+         consent:'Ja, benachrichtigt mich zum Start von Loui&rsquo;s Cupcakes. Ich habe die <a href="/datenschutz">Datenschutzerkl&auml;rung</a> gelesen.',
+         btn:'Auf die Warteliste', fine:'Kein Spam. Nur eine Nachricht zum Start. Abmeldung jederzeit m&ouml;glich.',
+         okHead:'Du bist dabei!', okBody:'Wir melden uns, sobald es losgeht.' },
+    en:{ head:'Be there from <em>day one.</em>',
+         sub:'Join the waitlist and be the first to know when and where your first cupcake is waiting.',
+         lblEmail:'Email address', lblName:'First name (optional)',
+         consent:'Yes, notify me when Loui&rsquo;s Cupcakes launches. I&rsquo;ve read the <a href="/datenschutz">privacy policy</a>.',
+         btn:'Join the waitlist', fine:'No spam. Just one message at launch. Unsubscribe anytime.',
+         okHead:'You&rsquo;re on the list!', okBody:'We&rsquo;ll be in touch as soon as we launch.' },
+    fr:{ head:'Soyez l&agrave; d&egrave;s le <em>premier jour.</em>',
+         sub:'Inscris-toi &agrave; la liste d&rsquo;attente et sois informé&middot;e en premier du jour et du lieu de ton premier cupcake.',
+         lblEmail:'Adresse e-mail', lblName:'Pr&eacute;nom (optionnel)',
+         consent:'Oui, pr&eacute;venez-moi du lancement de Loui&rsquo;s Cupcakes. J&rsquo;ai lu la <a href="/datenschutz">politique de confidentialit&eacute;</a>.',
+         btn:'Rejoindre la liste', fine:'Pas de spam. Un seul message au lancement. D&eacute;sinscription &agrave; tout moment.',
+         okHead:'Tu es sur la liste !', okBody:'On te contacte d&egrave;s le lancement.' }
+  };
+
+  function setLang(lang){
+    const t = T[lang];
+    document.documentElement.lang = lang;
+    document.getElementById('langField').value = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const k = el.getAttribute('data-i18n');
+      if(k==='eyebrow') return;               // eyebrow stays trilingual
+      if(t[k]!==undefined) el.innerHTML = t[k];
+    });
+    document.querySelectorAll('.langbar button').forEach(b=>{
+      b.setAttribute('aria-pressed', b.dataset.lang===lang ? 'true':'false');
+    });
+  }
+  document.querySelectorAll('.langbar button').forEach(b=>{
+    b.addEventListener('click', ()=> setLang(b.dataset.lang));
+  });
+  // default: German, or ?lang= to match your site's URL-param pattern
+  const urlLang = new URLSearchParams(location.search).get('lang');
+  setLang(['de','en','fr'].includes(urlLang) ? urlLang : 'de');
+
+  // Progressive enhancement: submit via AJAX so the user stays on-page.
+  // Falls back to a normal POST if fetch fails.
+  const form = document.querySelector('form[name="warteliste"]');
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    const body = new URLSearchParams(new FormData(form)).toString();
+    try{
+      await fetch('/', { method:'POST',
+        headers:{'Content-Type':'application/x-www-form-urlencoded'}, body });
+      document.getElementById('wrap').classList.add('is-done');
+      window.scrollTo({top:0, behavior:'smooth'});
+    }catch(err){ form.submit(); }
+  });
+</script>
+</body>
+</html>
