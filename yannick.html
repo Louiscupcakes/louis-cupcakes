@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yannick Ponde-Silcott · Loui's Cupcakes</title>
+<meta name="description" content="Digitale Visitenkarte – Yannick Ponde-Silcott, Mitbegründer von Loui's Cupcakes, Saarlouis.">
+<meta property="og:title" content="Yannick Ponde-Silcott · Loui's Cupcakes">
+<meta property="og:description" content="Mitbegründer · From Saarlouis with love">
+<meta name="theme-color" content="#2E2018">
+<style>
+  @font-face{font-family:"Fraunces";src:url("fonts/fraunces-v38-latin-regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Fraunces";src:url("fonts/fraunces-v38-latin-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap;}
+  @font-face{font-family:"Fraunces";src:url("fonts/fraunces-v38-latin-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Fraunces";src:url("fonts/fraunces-v38-latin-700italic.woff2") format("woff2");font-weight:700;font-style:italic;font-display:swap;}
+  @font-face{font-family:"Karla";src:url("fonts/karla-v33-latin-regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Karla";src:url("fonts/karla-v33-latin-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
+
+  :root{
+    --choc:#2E2018; --choc-2:#241912;
+    --cream:#F0DED6; --cream-2:#FFF7F0;
+    --rasp:#D85273; --rasp-dark:#C24462;
+    --gold:#CE8E47;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{
+    min-height:100svh;
+    background:var(--choc);
+    font-family:"Karla",system-ui,sans-serif;
+    display:flex; align-items:center; justify-content:center;
+    padding:22px 16px 40px;
+  }
+  .card{
+    width:100%; max-width:430px;
+    border:2px solid var(--rasp);
+    border-radius:26px;
+    padding:34px 26px 0;
+    position:relative;
+    background:
+      radial-gradient(120% 60% at 50% 0%, rgba(206,142,71,.10), rgba(0,0,0,0) 60%),
+      var(--choc);
+    overflow:hidden;
+  }
+  .logo{ display:block; width:min(250px,72%); height:auto; margin:4px auto 22px; }
+  .name{ text-align:center; font-weight:700; font-size:24px; letter-spacing:.04em; color:var(--cream); }
+  .role{ text-align:center; font-family:"Fraunces",serif; font-style:italic; font-weight:700;
+         font-size:19px; color:var(--rasp); margin-top:6px; }
+  .rule{ width:170px; height:2px; margin:20px auto;
+         background:linear-gradient(90deg, rgba(216,82,115,0), var(--rasp), rgba(216,82,115,0)); }
+
+  /* primary action */
+  .save{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    width:100%; padding:16px 18px;
+    background:var(--rasp); color:#fff;
+    border:0; border-radius:14px;
+    font-family:"Karla"; font-weight:700; font-size:17px; letter-spacing:.02em;
+    text-decoration:none; cursor:pointer;
+    transition:background .15s ease, transform .06s ease;
+  }
+  .save:hover{ background:var(--rasp-dark); }
+  .save:active{ transform:translateY(1px); }
+  .save svg{ flex:0 0 auto; }
+
+  /* secondary actions */
+  .actions{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
+  .act{
+    display:flex; align-items:center; gap:10px;
+    padding:13px 14px;
+    background:rgba(240,222,214,.06);
+    border:1px solid rgba(240,222,214,.22);
+    border-radius:13px;
+    color:var(--cream); text-decoration:none;
+    font-weight:700; font-size:14.5px;
+    transition:background .15s ease, border-color .15s ease;
+  }
+  .act:hover{ background:rgba(240,222,214,.12); border-color:rgba(240,222,214,.4); }
+  .act .ic{
+    width:34px; height:34px; flex:0 0 34px;
+    background:var(--rasp); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .act .ic svg{ width:17px; height:17px; }
+  .act .lines{ display:flex; flex-direction:column; min-width:0; }
+  .act .k{ font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+  .act .v{ font-size:13.5px; color:var(--cream); font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+  .tag{ text-align:center; font-family:"Fraunces",serif; font-style:italic; font-weight:700;
+        font-size:16px; line-height:1.5; color:var(--gold); margin:24px 0 4px; }
+  .owner{ text-align:center; font-size:12px; color:rgba(240,222,214,.55); margin-top:10px; }
+
+  /* scalloped foot, full width, echoing the print card */
+  .scallop{ display:block; width:calc(100% + 52px); height:26px; margin:20px -26px 0; }
+
+  @media (max-width:360px){ .actions{ grid-template-columns:1fr; } }
+  @media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
+</style>
+</head>
+<body>
+  <main class="card">
+    <img class="logo" src="logo_cream_web.png" alt="Loui's Cupcakes – From Saarlouis with love">
+    <h1 class="name">YANNICK PONDE-SILCOTT</h1>
+    <p class="role">Mitbegründer</p>
+    <div class="rule"></div>
+
+    <a class="save" href="yannick.vcf" download="Yannick-Ponde-Silcott.vcf">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+      Kontakt speichern
+    </a>
+
+    <div class="actions">
+      <a class="act" href="tel:+4915123556599">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <span class="lines"><span class="k">Anrufen</span><span class="v">+49 151 23556599</span></span>
+      </a>
+      <a class="act" href="https://wa.me/4915123556599" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></span>
+        <span class="lines"><span class="k">WhatsApp</span><span class="v">Nachricht senden</span></span>
+      </a>
+      <a class="act" href="mailto:info@louiscupcakes.com">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+        <span class="lines"><span class="k">E-Mail</span><span class="v">info@louiscupcakes.com</span></span>
+      </a>
+      <a class="act" href="https://instagram.com/louiscupcakes.de" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>
+        <span class="lines"><span class="k">Instagram</span><span class="v">@louiscupcakes.de</span></span>
+      </a>
+      <a class="act" href="https://louiscupcakes.com" style="grid-column:1 / -1;">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+        <span class="lines"><span class="k">Website</span><span class="v">www.louiscupcakes.com</span></span>
+      </a>
+    </div>
+
+    <p class="tag">Danke für deine Unterstützung<br>lokal &amp; handgemacht!</p>
+    <p class="owner">Loui's Cupcakes · Inhaber: Alston Ponde-Silcott · Saarlouis</p>
+
+    <svg class="scallop" viewBox="0 0 480 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path fill="#D85273" d="M0 26 L0 13 A13 13 0 0 1 26 13 A13 13 0 0 1 52 13 A13 13 0 0 1 78 13 A13 13 0 0 1 104 13 A13 13 0 0 1 130 13 A13 13 0 0 1 156 13 A13 13 0 0 1 182 13 A13 13 0 0 1 208 13 A13 13 0 0 1 234 13 A13 13 0 0 1 260 13 A13 13 0 0 1 286 13 A13 13 0 0 1 312 13 A13 13 0 0 1 338 13 A13 13 0 0 1 364 13 A13 13 0 0 1 390 13 A13 13 0 0 1 416 13 A13 13 0 0 1 442 13 A13 13 0 0 1 468 13 L480 13 L480 26 Z"/></svg>
+  </main>
+</body>
+</html>
