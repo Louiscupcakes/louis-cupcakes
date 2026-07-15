@@ -31,7 +31,7 @@
     padding:22px 16px 40px;
   }
   .card{
-    width:100%; max-width:430px;
+    width:100%; max-width:410px;
     border:2px solid var(--rasp);
     border-radius:26px;
     padding:34px 26px 0;
@@ -66,6 +66,7 @@
   .actions{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
   .act{
     display:flex; align-items:center; gap:10px;
+    min-width:0;
     padding:13px 14px;
     background:rgba(240,222,214,.06);
     border:1px solid rgba(240,222,214,.22);
@@ -81,9 +82,9 @@
     display:flex; align-items:center; justify-content:center;
   }
   .act .ic svg{ width:17px; height:17px; }
-  .act .lines{ display:flex; flex-direction:column; min-width:0; }
+  .act .lines{ display:flex; flex-direction:column; min-width:0; flex:1; }
   .act .k{ font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; }
-  .act .v{ font-size:13.5px; color:var(--cream); font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .act .v{ font-size:13.5px; color:var(--cream); font-weight:700; overflow-wrap:anywhere; }
 
   .tag{ text-align:center; font-family:"Fraunces",serif; font-style:italic; font-weight:700;
         font-size:16px; line-height:1.5; color:var(--gold); margin:24px 0 4px; }
@@ -115,7 +116,7 @@
       </a>
       <a class="act" href="https://wa.me/4915123556599" target="_blank" rel="noopener">
         <span class="ic"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></span>
-        <span class="lines"><span class="k">WhatsApp</span><span class="v">Nachricht senden</span></span>
+        <span class="lines"><span class="k">WhatsApp</span><span class="v">Schreib uns</span></span>
       </a>
       <a class="act" href="mailto:info@louiscupcakes.com">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
@@ -123,7 +124,7 @@
       </a>
       <a class="act" href="https://instagram.com/louiscupcakes.de" target="_blank" rel="noopener">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>
-        <span class="lines"><span class="k">Instagram</span><span class="v">@louiscupcakes.de</span></span>
+        <span class="lines"><span class="k">Instagram</span><span class="v">louiscupcakes.de</span></span>
       </a>
       <a class="act" href="https://louiscupcakes.com" style="grid-column:1 / -1;">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
