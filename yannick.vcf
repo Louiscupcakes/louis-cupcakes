@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Ponde-Silcott;Yannick;;;
+FN:Yannick Ponde-Silcott
+ORG:Loui's Cupcakes
+TITLE:Mitbegründer
+TEL;TYPE=CELL,VOICE:+4915123556599
+EMAIL;TYPE=INTERNET,WORK:info@louiscupcakes.com
+URL:https://louiscupcakes.com
+X-SOCIALPROFILE;TYPE=instagram:https://instagram.com/louiscupcakes.de
+ADR;TYPE=WORK:;;Am Eisenstein 2;Saarlouis;;66740;Deutschland
+NOTE:From Saarlouis with love
+END:VCARD
